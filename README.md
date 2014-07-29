@@ -1,6 +1,6 @@
 # Slickplan API
 
-This is a RESTful API that uses serialized JSON and OAuth2 authentication.
+This is a REST-style API that uses JSON for serialization and OAuth 2 for authentication.
 
 ## Making Requests
 
@@ -8,13 +8,17 @@ This is a RESTful API that uses serialized JSON and OAuth2 authentication.
 
 All requests start with the `https://slickplan.com/api/v1/` base URL.
 
-* All requests are done via SSL.
+* All requests are done via **SSL only**.
 * All responses are in JSON.
+
+### Encoding
+
+The API expects all data to be UTF-8 encoded.
 
 ## Authentication
 
 In order to make authorized calls to Slickplan's API, your application must first obtain an OAuth access token.
-To register your app go to http://slickplan.com.
+To register your app go to https://slickplan.com/api/v1/register.
 
 Slickplan implements OAuth2 with the authentication code flow.
 
@@ -38,4 +42,4 @@ You can perform up to 25 requests per 10 second period on an account with one OA
 
 ## Endpoints
 
-* [Authenticated User Info](./endpoints/me.md)
+* [`/me.json` Authenticated User Info](./endpoints/me.md)
