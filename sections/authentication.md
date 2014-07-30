@@ -32,6 +32,18 @@ We offer OAuth2 as the standard way to authenticate with our API as this offers 
     client_secret | string | **Required.** The client secret you received from Slickplan when you registered.
     redirect_uri | string | **Required.** The URL in your app where users will be sent after authorization.
     code | string | **Required.** The code you received as a response after authorization.
+    
+    **Response**
+    
+    ```json
+    {
+        "access_token": "742075952535e1ae2f616z189c1828fac2a2a555",
+        "expires_in": 604800,
+        "token_type": "Bearer",
+        "scope": "basic",
+        "refresh_token": "f31ee59fc5ez8443015cff37f572f8ec39dca7da"
+    }
+    ```
 
     Use the access token to access the Slickplan API. The access token allows you to make requests to the API on a behalf of a user, i.e.:
 
