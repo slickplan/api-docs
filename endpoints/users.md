@@ -2,7 +2,7 @@
 
 ## Get list of account's users
 
-* `GET /v1/users.json`
+* `GET /v1/users`
 
 ### Response
 ``` json
@@ -56,7 +56,7 @@ is_admin | boolean | `true` if user has admin rights, `false` otherwise.
 
 ## Get the specified user
 
-* `GET /v1/users/2.json`
+* `GET /v1/users/2`
 
 ### Response
 ``` json
@@ -86,7 +86,7 @@ is_admin | boolean | `true` if user has admin rights, `false` otherwise.
 
 ## Create an user
 
-* `POST /v1/users.json`
+* `POST /v1/users`
 
 ### Request
 ``` json
@@ -104,8 +104,8 @@ This will return `201 Created` with the current JSON representation of the user 
 
 ## Update an user
 
-* `PUT /v1/users/2.json` will update the user from the parameters passed and return the JSON representation of the updated user. If the user does not have access to update the contributor, you'll see `403 Forbidden`.
+* `PUT /v1/users/2` will update the user from the parameters passed and return the JSON representation of the updated user. If the user does not have access to update the contributor, you'll see `403 Forbidden`.
 
 ## Delete an user
 
-* `DELETE /v1/users/2.json` will delete the specified user and return `204 No Content` if that was successful. If the user does not have access to delete the contributor, you'll see `403 Forbidden`.
+* `DELETE /v1/users/2` will delete the specified user and return `204 No Content` if that was successful. If the user does not have access to delete the contributor, you'll see `403 Forbidden`.

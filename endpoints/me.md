@@ -2,7 +2,7 @@
 
 Use this endpoint to get information about the currently authenticated user.
 
-* `GET /v1/me.json`
+* `GET /v1/me`
 
 ### Response
 ``` json
