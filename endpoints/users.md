@@ -16,7 +16,7 @@
         "last_login": "2014-06-20T08:49:20-04:00",
         "created": "2013-10-11T11:32:01-04:00",
         "is_active": false,
-        "is_admin": false
+        "user_type": "admin"
     },
     {
         "id": 2,
@@ -27,7 +27,7 @@
         "last_login": "2014-07-15T09:17:04-04:00",
         "created": "2013-10-11T12:01:15-04:00",
         "is_active": true,
-        "is_admin": false
+        "user_type": "contributor"
     },
     {
         "id": 3,
@@ -38,7 +38,7 @@
         "last_login": "2014-07-24T17:40:29-04:00",
         "created": "2013-11-18T19:52:59-05:00",
         "is_active": true,
-        "is_admin": true
+        "user_type": "contributor"
     }
 ]
 ```
@@ -52,7 +52,7 @@ last_name | string | Last name of the user.
 last_login | string | Last login date in ISO 8601 format.
 created | string | User creation date in ISO 8601 format.
 is_active | boolean | `true` if user is active, `false` otherwise.
-is_admin | boolean | `true` if user has admin rights, `false` otherwise.
+user_type | string | User type, check the table in [Me endpoint](./me.md).
 
 ## Get the specified user
 
@@ -69,7 +69,7 @@ is_admin | boolean | `true` if user has admin rights, `false` otherwise.
     "last_login": "2014-06-20T08:49:20-04:00",
     "created": "2013-10-11T11:32:01-04:00",
     "is_active": false,
-    "is_admin": false
+    "user_type": "contributor"
 }
 ```
 Key | Type | Description
@@ -95,8 +95,8 @@ is_admin | boolean | `true` if user has admin rights, `false` otherwise.
     "username": "elton",
     "first_name": "Elton",
     "last_name": "John",
-    "active": true,
-    "admin": false
+    "is_active": true,
+    "user_type": "admin"
 }
 ```
 

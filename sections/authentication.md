@@ -18,7 +18,7 @@ We offer OAuth2 as the standard way to authenticate with our API as this offers 
     --- | --- | ---
     client_id | string | **Required.** The client ID you received from Slickplan when you registered.
     redirect_uri | string | **Required.** The URL in your app where users will be sent after authorization.
-    scope | string | A space separated list of [scopes](./scopes.md). If not provided, scope defaults to `basic`.
+    scope | string | A space separated list of [scopes](./scopes.md). If not provided, scope defaults to `user_read`.
     
     If the user accepts your request, Slickplan redirects back to your site with a temporary code in a `code` parameter.
 
@@ -35,7 +35,7 @@ We offer OAuth2 as the standard way to authenticate with our API as this offers 
     
     **Response**
     
-    ```json
+    ``` json
     {
         "access_token": "742075952535e1ae2f616z189c1828fac2a2a555",
         "expires_in": 604800,
