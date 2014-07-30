@@ -16,7 +16,8 @@ Use this endpoint to get information about the currently authenticated user.
     "signed_up": "2012-03-28T10:30:01-04:00",
     "account_uri": "http://example.slickplan.com/",
     "user_plan": "premium",
-    "user_type": "owner"
+    "user_type": "owner",
+    "is_active": true
 }
 ```
 Key | Type | Description
