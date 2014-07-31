@@ -52,7 +52,7 @@ last_name | string | Last name of the user.
 last_login | string | Last login date in ISO 8601 format.
 created | string | User creation date in ISO 8601 format.
 is_active | boolean | `true` if user is active, `false` otherwise.
-user_type | string | User type, check the table in [Me endpoint](./me.md).
+user_type | string | User type, check the table in [Me endpoint](./me.md#user-types).
 
 ## Get the specified user
 
@@ -82,7 +82,7 @@ last_name | string | Last name of the user.
 last_login | string | Last login date in ISO 8601 format.
 created | string | User creation date in ISO 8601 format.
 is_active | boolean | `true` if user is active, `false` otherwise.
-is_admin | boolean | `true` if user has admin rights, `false` otherwise.
+user_type | string | User type, check the table in [Me endpoint](./me.md#user-types).
 
 ## Create an user
 

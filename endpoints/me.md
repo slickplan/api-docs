@@ -29,7 +29,7 @@ first_name | string | First name of the user.
 last_name | string | Last name of the user.
 last_login | string | Last login date in ISO 8601 format.
 signed_up | string | Signed up date in ISO 8601 format.
-account_uri | string | Account URI with trailing slash or empty if account is not active.
+account_uri | string | Account URI with trailing slash or empty if account has not been activated yet.
 user_plan | string | User plan, check the table below.
 user_type | string | User type, check the table below.
 is_active | boolean | `true` if account is active, `false` otherwise.
