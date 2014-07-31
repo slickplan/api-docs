@@ -3,6 +3,7 @@
 Use this endpoint to get information about the currently authenticated user.
 
 * `GET /v1/me`
+* Required scope: `user_read` (default)
 
 ### Response
 ``` json

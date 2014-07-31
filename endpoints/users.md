@@ -3,6 +3,7 @@
 ## Get list of account's users
 
 * `GET /v1/users`
+* Required scope: `contributors_read` or `contributors_write`
 
 ### Response
 ``` json
@@ -57,11 +58,12 @@ user_type | string | User type, check the table in [Me endpoint](./me.md#user-ty
 ## Get the specified user
 
 * `GET /v1/users/2`
+* Required scope: `contributors_read` or `contributors_write`
 
 ### Response
 ``` json
 {
-    "id": 1,
+    "id": 2,
     "email": "elton@example.com",
     "username": "elton",
     "first_name": "Elton",
@@ -74,7 +76,7 @@ user_type | string | User type, check the table in [Me endpoint](./me.md#user-ty
 ```
 Key | Type | Description
 --- | --- | ---
-id | integer | Unique identifier of the user
+id | integer | Unique identifier of the user.
 email | string | Email address of the user.
 username | string | Username of the user.
 first_name | string | First name of the user.
@@ -87,6 +89,7 @@ user_type | string | User type, check the table in [Me endpoint](./me.md#user-ty
 ## Create an user
 
 * `POST /v1/users`
+* Required scope: `contributors_write`
 
 ### Request
 ``` json
@@ -100,12 +103,18 @@ user_type | string | User type, check the table in [Me endpoint](./me.md#user-ty
 }
 ```
 
-This will return `201 Created` with the current JSON representation of the user if the creation was successful. If the user does not have access to update the contributor, you'll see `403 Forbidden`.
+This will return `201 Created` with the current JSON representation of the user if the creation was successful. If the user does not have access to update the contributor you'll see `403 Forbidden`. Validations messages return with `400` HTTP code.
 
 ## Update an user
 
-* `PUT /v1/users/2` will update the user from the parameters passed and return the JSON representation of the updated user. If the user does not have access to update the contributor, you'll see `403 Forbidden`.
+* `PUT /v1/users/2`
+* Required scope: `contributors_write`
+
+Will update the user from the parameters passed and return the JSON representation of the updated user. If the user does not have access to update the contributor you'll see `403 Forbidden`. Validations messages return with `400` HTTP code.
 
 ## Delete an user
 
-* `DELETE /v1/users/2` will delete the specified user and return `204 No Content` if that was successful. If the user does not have access to delete the contributor, you'll see `403 Forbidden`.
+* `DELETE /v1/users/2`
+* Required scope: `contributors_write`
+
+Will delete the specified user and return `204 No Content` if that was successful. If the user does not have access to delete the contributor you'll see `403 Forbidden`.
