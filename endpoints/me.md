@@ -53,6 +53,7 @@ Will update the currently authenticated user information from the parameters pas
     "last_name": "Smith",
     "timezone": "Europe\/Warsaw"
 }
+```
 
 ## User plans
 
