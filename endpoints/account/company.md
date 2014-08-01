@@ -25,11 +25,11 @@ use_dark_font | string | Account branding font color - `true` for dark gray, `fa
 
 ## Update setting
 
-* `PUT /v1/account/company` or `POST /v1/account/company`
+* `PUT /v1/account/company`
 * Required scope: `company_settings_write`
 
 Will update the company settings from the parameters passed and return the JSON representation of the settings. If the user does not have access to update company settings you'll see `403 Forbidden`. Validations messages return with `400` HTTP code.
- 
+
 ### Sample request
 ``` json
 {
