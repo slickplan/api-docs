@@ -2,7 +2,7 @@
 
 ## Get all comments
 
-* `GET /v1/comments`
+* `GET /v1/comments/<sitemap_id>`
 * Required scope: `sitemaps_comments_read` or `sitemaps_comments_write`
 
 ### Response
@@ -46,7 +46,7 @@ parent_id | integer | Unique identifier of the parent comment (so this comment i
 
 ## Get all comments (hierarchical)
 
-* `GET /v1/comments?hierarchical=1`
+* `GET /v1/comments/<sitemap_id>?hierarchical=1`
 * Required scope: `sitemaps_comments_read` or `sitemaps_comments_write`
 
 ### Response
@@ -81,7 +81,7 @@ parent_id | integer | Unique identifier of the parent comment (so this comment i
 
 ## Get single comment
 
-* `GET /v1/comments/2`
+* `GET /v1/comments/<sitemap_id>/2`
 * Required scope: `sitemaps_comments_read` or `sitemaps_comments_write`
 
 ### Response
@@ -101,7 +101,7 @@ parent_id | integer | Unique identifier of the parent comment (so this comment i
 
 ## Create new comment
 
-* `POST /v1/comments`
+* `POST /v1/comments/<sitemap_id>`
 * Required scope: `sitemaps_comments_write`
 
 Will create a new comment from the parameters passed and return the JSON representation of the created comment. If the user does not have access to create comments you'll see `403 Forbidden`. Validations messages return with `400` HTTP code.
@@ -116,7 +116,7 @@ Will create a new comment from the parameters passed and return the JSON represe
 
 ## Delete comment
 
-* `DELETE /v1/comments/2`
+* `DELETE /v1/comments/<sitemap_id>/2`
 * Required scope: `sitemaps_color_comments_write`
 
 Will delete the specified comment and return `204 No Content` if that was successful. If the user does not have access to delete the comment you'll see `403 Forbidden`.
