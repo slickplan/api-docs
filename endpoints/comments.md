@@ -78,6 +78,7 @@ parent_id | integer | Unique identifier of the parent comment (so this comment i
         ]
     }
 ]
+```
 
 ## Get single comment
 
