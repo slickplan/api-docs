@@ -41,11 +41,11 @@ You can perform up to 25 requests per 10 second period on an account with one OA
   * [Company](./endpoints/account/company.md)
   * [Invoices](./endpoints/account/invoices.md)
   * [Messages](./endpoints/account/messages.md)
+* [Color Palettes](./endpoints/palettes.md)
+* [Comments](./endpoints/comments.md)
 * [Me](./endpoints/me.md)
+* [Page Types](./endpoints/archetypes.md)
 * [Sitemaps](./endpoints/sitemaps.md)
-  * [Color Palettes](./endpoints/sitemaps/palettes.md)
-  * [Comments](./endpoints/sitemaps/comments.md)
-  * [Page Types](./endpoints/sitemaps/archetypes.md)
 * [Users](./endpoints/users.md)
 
 ## Sections
