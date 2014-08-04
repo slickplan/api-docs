@@ -39,3 +39,4 @@ Will update the company settings from the parameters passed and return the JSON 
     "site_color": "#FF3366",
     "use_dark_font": true
 }
+```
