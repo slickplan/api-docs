@@ -4,7 +4,7 @@ We offer OAuth2 as the standard way to authenticate with our API as this offers 
 
 ## Getting started
 
-1. Register your app at [slickplan.com/api/v1/register](https://slickplan.com/api/v1/register).
+1. Register your app at [slickplan.com/api/register](https://slickplan.com/api/register).
   You'll be assigned a `client_id` and `client_secret`. You'll need to provide a `redirect_uri`: a URL where we can send a verification code. Just enter a dummy URL like `http://example.com/oauth` if you're not ready for this yet.
 2. [Grab an OAuth2 library](http://oauth.net/code/).
 3. Configure your OAuth2 library with your `client_id`, `client_secret`, and `redirect_uri`.

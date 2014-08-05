@@ -151,7 +151,7 @@ Will update the sitemap from the parameters passed and return the JSON represent
 }
 ```
 
-## Delete an user
+## Delete a sitemap
 
 * `DELETE /v1/sitemap/3`
 * Required scope: `sitemaps_write`
