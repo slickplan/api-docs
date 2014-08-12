@@ -46,6 +46,8 @@ You can perform up to 25 requests per 10 second period on an account with one OA
 * [Me](./endpoints/me.md)
 * [Page Types](./endpoints/archetypes.md)
 * [Sitemaps](./endpoints/sitemaps.md)
+  * [Options](./endpoints/sitemaps/options.md)
+  * [Structure](./endpoints/sitemaps/structure.md)
 * [Users](./endpoints/users.md)
 
 ## Sections
