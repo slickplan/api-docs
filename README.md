@@ -14,7 +14,7 @@ All requests start with the `https://slickplan.com/api/v1/` base URL.
 
 ## Authentication
 
-In order to make authorized calls to Slickplan's API, your application must first obtain an OAuth access token. To register your app go to https://slickplan.com/api/register.
+In order to make authorized calls to Slickplan's API, your application must first obtain an OAuth access token. To register your app go to [https://slickplan.com/api/register](https://slickplan.com/api/register) (to modify your existing application details go to https://slickplan.com/api/register/<client_secret>).
 
 Slickplan implements OAuth2 with the authentication code flow. Read our [OAuth2 authentication guide](./sections/authentication.md) to get started.
 
