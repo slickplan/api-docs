@@ -18,7 +18,7 @@ In order to make authorized calls to Slickplan's API, your application must firs
 
 Slickplan implements OAuth2 with the authentication code flow. Read our [OAuth2 authentication guide](./sections/authentication.md) to get started.
 
-Once you have authenticated, you can get information about the authenticated user by calling `GET https://slickplan.com/api/v1/me.json`. More details about the request and response are available on the [endpoint page](./endpoints/me.md).
+Once you have authenticated, you can get information about the authenticated user by calling `GET https://slickplan.com/api/v1/me`. More details about the request and response are available on the [endpoint page](./endpoints/me.md).
 
 ## Rate Limiting
 
@@ -56,3 +56,16 @@ You can perform up to 25 requests per 10 second period on an account with one OA
 * [Scopes](./sections/scopes.md)
 * [User Plans](./endpoints/me.md#user-plans)
 * [User Types](./endpoints/me.md#user-types)
+
+## Changes
+
+**2015-08-05**
+* Added new [grouped scopes](./sections/scopes.md):
+  * `sitemaps_all_read`
+  * `sitemaps_all_write`
+  * `all_read`
+  * `all_write`
+
+## Support
+
+Having trouble with this API? Contact us directly via email [support@slickplan.com](mailto:support@slickplan.com).
