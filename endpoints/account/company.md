@@ -10,7 +10,7 @@
 {
     "company_name": "Slickplan Company",
     "company_name_2": "Flowchart Software",
-    "subdomain": "slickplan",
+    "subdomain": "example",
     "site_color": "#008DF5",
     "use_dark_font": false
 }
@@ -35,7 +35,7 @@ Will update the company settings from the parameters passed and return the JSON 
 {
     "company_name": "Another Company",
     "company_name_2": "Our new slogan",
-    "subdomain": "slickplan2",
+    "subdomain": "example2",
     "site_color": "#FF3366",
     "use_dark_font": true
 }

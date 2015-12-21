@@ -84,7 +84,7 @@ Key | Type | Description
 --- | --- | ---
 id | integer | Unique identifier of the page type, read-only are prefixed with `_`.
 name | string | Page type name.
-icon | string | Page type icon - default one if empty or [FontAwesome 4.1.0](http://fortawesome.github.io/Font-Awesome/) class name.
+icon | string | Page type icon - default one if empty or [FontAwesome 4.3](http://fortawesome.github.io/Font-Awesome/) class name.
 
 ## Get single page type
 

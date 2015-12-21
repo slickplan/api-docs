@@ -1,5 +1,7 @@
 # Sitemap options
 
+**Note:** it's not possible to fetch archived sitemaps, you will get `HTTP 403 Forbidden` response.
+
 ## Get the sitemap options
 
 * `GET /v1/sitemaps/<sitemap_id>/options`

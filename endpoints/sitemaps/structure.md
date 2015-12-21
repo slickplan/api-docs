@@ -1,5 +1,7 @@
 # Sitemap structure
 
+**Note:** it's not possible to fetch archived sitemaps, you will get `HTTP 403 Forbidden` response.
+
 ## Get the sitemap structure
 
 * `GET /v1/sitemaps/<sitemap_id>/structure`
@@ -14,7 +16,10 @@
             "level": "home",
             "text": "Homepage",
             "order": 1,
-            "id": "svgmld3kg61tyrrcjzb"
+            "id": "svgmld3kg61tyrrcjzb",
+            "has_diagrams": false,
+            "has_files": false,
+            "has_content": false
         },
         {
             "color": "#57aa34",
@@ -22,22 +27,20 @@
             "level": 1,
             "text": "Level 1",
             "order": 1000,
-            "childs": [
-                "svgqxnn3tmdii95t73c",
-                "svgxzpp9elez3eryp8w",
-                "svgp4vknyywt8euw3nu",
-                "svgwovrvtucyrdzhl8e",
-                "svgjvn9o7hzzz1586h4"
-            ],
-            "id": "svgz1wxw28i5deh25tt"
+            "id": "svgz1wxw28i5deh25tt",
+            "has_diagrams": false,
+            "has_files": true,
+            "has_content": false
         },
-        (...)
         {
             "color": "#fbcdaf",
             "level": "foot",
             "text": "Example",
             "order": 5000,
-            "id": "svgvcqzzz9gpzegqypa"
+            "id": "svgvcqzzz9gpzegqypa",
+            "has_diagrams": true,
+            "has_files": false,
+            "has_content": true
         }
     ],
     "svgtvberlfm9etj2iqp": [
@@ -45,25 +48,16 @@
             "level": "home",
             "text": "Section Home",
             "order": 1,
-            "id": "svgedzxjgdut1yndneo"
-        },
-        (...)
+            "id": "svgedzxjgdut1yndneo",
+            "has_diagrams": false,
+            "has_files": false,
+            "has_content": true
+        }
     ]
 }
 ```
-Key | Type | Description
---- | --- | ---
-id | string | Sitemap unique page ID.
-level | string | Page level: `home`, `util`, `foot` or an integer.
-text | string | Page label.
-order | integer | Page level order, to use with `ORDER BY`.
-color | string | Page background color.
-textcolor | string | Page text color.
-archetype | string | Page type ID.
-parent | string | Parent page ID.
-childs | array | Children pages IDs.
-desc | string | Page note.
-url | string | Page link.
+
+See the description of a single page details on the (page endpoint)[./page.md].
 
 ## Get the specified section structure
 
@@ -78,7 +72,10 @@ url | string | Page link.
         "level": "home",
         "text": "Homepage",
         "order": 1,
-        "id": "svgmld3kg61tyrrcjzb"
+        "id": "svgmld3kg61tyrrcjzb",
+        "has_diagrams": false,
+        "has_files": false,
+        "has_content": false
     },
     {
         "color": "#57aa34",
@@ -86,22 +83,20 @@ url | string | Page link.
         "level": 1,
         "text": "Level 1",
         "order": 1000,
-        "childs": [
-            "svgqxnn3tmdii95t73c",
-            "svgxzpp9elez3eryp8w",
-            "svgp4vknyywt8euw3nu",
-            "svgwovrvtucyrdzhl8e",
-            "svgjvn9o7hzzz1586h4"
-        ],
-        "id": "svgz1wxw28i5deh25tt"
+        "id": "svgz1wxw28i5deh25tt",
+        "has_diagrams": true,
+        "has_files": false,
+        "has_content": true
     },
-    (...)
     {
         "color": "#fbcdaf",
         "level": "foot",
         "text": "Example",
         "order": 5000,
-        "id": "svgvcqzzz9gpzegqypa"
+        "id": "svgvcqzzz9gpzegqypa",
+        "has_diagrams": true,
+        "has_files": false,
+        "has_content": true
     }
 ]
 ```

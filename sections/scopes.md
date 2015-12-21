@@ -21,6 +21,12 @@ sitemaps_page_types_read | Grants read-only access to page types (sitemap archet
 sitemaps_page_types_write | Grants read/write access to page types (sitemap archetypes).
 sitemaps_color_palettes_read | Grants read-only access to color palettes.
 sitemaps_color_palettes_write | Grants read/write access to color palettes.
+sitemaps_files_read | Grants read-only access to sitemap files.
+sitemaps_files_write | Grants read/write access to sitemap files.
+sitemaps_diagrams_read | Grants read-only access to sitemap diagrams.
+sitemaps_diagrams_write | Grants read/write access to sitemap diagrams.
+sitemaps_content_read | Grants read-only access to sitemap contents.
+sitemaps_content_write | Grants read/write access to sitemap contents.
 
 ## Extra (group) scopes
 

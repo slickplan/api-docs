@@ -26,7 +26,7 @@
         "versions": [
             {
                 "id": 3,
-                "version": 1,
+                "version": "1.0",
                 "uri_alias": "abcxyz",
                 "date_created": "2014-07-17T04:47:44-04:00",
                 "date_modified": "2014-08-04T10:55:06-04:00"
@@ -42,14 +42,14 @@
         "versions": [
             {
                 "id": 2,
-                "version": 1,
+                "version": "1.0",
                 "uri_alias": "abcdef",
                 "date_created": "2014-04-07T11:34:21-04:00",
                 "date_modified": "2014-07-16T12:59:56-04:00"
             },
             {
                 "id": 4,
-                "version": 2,
+                "version": "2.0",
                 "uri_alias": "fedcba",
                 "date_created": "2014-05-16T13:30:55-04:00",
                 "date_modified": "2014-05-16T13:30:55-04:00"
@@ -77,7 +77,7 @@ role | string | `editor` or `viewer`.
 Key | Type | Description
 --- | --- | ---
 id | integer | Unique identifier of the sitemap version.
-version | integer/float | Version name.
+version | string | Version number.
 uri_alias | string | A sitemap alias for sitemap preview: `http://slickplan.com/<alias>`
 date_created | string | Sitemap creation date in ISO 8601 format.
 date_modified | string | Last modification date in ISO 8601 format.
@@ -104,7 +104,7 @@ date_modified | string | Last modification date in ISO 8601 format.
             "role": "viewer"
         }
     ],
-    "version": 1,
+    "version": "1.0",
     "uri_alias": "abcxyz",
     "date_created": "2014-07-17T04:47:44-04:00",
     "date_modified": "2014-08-04T10:55:06-04:00"
@@ -133,7 +133,7 @@ This will return `201 Created` with the current JSON representation of the sitem
 
 ## Update a sitemap
 
-* `PUT /v1/sitemap/3`
+* `PUT /v1/sitemaps/3`
 * Required scope: `sitemaps_write`
 
 Will update the sitemap from the parameters passed and return the JSON representation of the updated sitemap. If the user does not have access to update the sitemap you'll see `403 Forbidden`. Validations messages return with `400` HTTP code.
@@ -153,7 +153,7 @@ Will update the sitemap from the parameters passed and return the JSON represent
 
 ## Delete a sitemap
 
-* `DELETE /v1/sitemap/3`
+* `DELETE /v1/sitemaps/3`
 * Required scope: `sitemaps_write`
 
 Will delete the specified sitemap and return `204 No Content` if that was successful. If the user does not have access to delete the sitemap you'll see `403 Forbidden`.

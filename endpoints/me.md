@@ -17,7 +17,7 @@ Use this endpoint to get information about the currently authenticated user.
     "last_login": "2014-07-29T08:47:32-04:00",
     "signed_up": "2012-03-28T10:30:01-04:00",
     "account_uri": "http://example.slickplan.com/",
-    "user_plan": "premium",
+    "user_plan": 8,
     "user_type": "owner",
     "is_active": true
 }
@@ -33,7 +33,7 @@ timezone | string | User timezone, [check the supported list of timezones](http:
 last_login | string | Last login date in ISO 8601 format.
 signed_up | string | Signed up date in ISO 8601 format.
 account_uri | string | Account URI with trailing slash or empty if account has not been activated yet.
-user_plan | string | User plan, check the table below.
+user_plan | integer | User plan, check the table below.
 user_type | string | User type, check the table below.
 is_active | boolean | `true` if account is active, `false` otherwise.
 
@@ -59,10 +59,14 @@ Will update the currently authenticated user information from the parameters pas
 
 Name | Description
 --- | ---
-`free` | Free user
-`basic` | Basic plan user
-`premium` | Premium plan user
-`unlimited` | Unlimited plan user
+`1` | Free user
+`2` | Basic plan user (legacy)
+`3` | Premium plan user (legacy)
+`4` | Unlimited plan user (legacy)
+`5` | Basic plan user
+`6` | Pro plan user
+`7` | Team plan user
+`8` | Agency plan user
 
 ## User types
 
@@ -70,4 +74,4 @@ Name | Description
 --- | ---
 `owner` | Account owner
 `admin` | An admin account
-`contributor` | A contributor account
+`contributor` | A contributor account (editor/viewer)

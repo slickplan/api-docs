@@ -59,6 +59,21 @@ You can perform up to 25 requests per 10 second period on an account with one OA
 
 ## Changes
 
+**2015-12-21**
+* All dates are now in UTC timezone
+* Value of `version` in sitemap structures is now a string instead of integer
+* Removed `childs` key from sitemap structures, you can use `parent` to build hierarchy
+* Added new endpoints:
+  * Sitemaps > [Diagrams](./endpoints/sitemaps/diagrams.md)
+  * Sitemaps > [Page](./endpoints/sitemaps/page.md)
+* Added new [scopes](./sections/scopes.md):
+  * `sitemaps_files_read`
+  * `sitemaps_files_write`
+  * `sitemaps_diagrams_read`
+  * `sitemaps_diagrams_write`
+  * `sitemaps_content_read`
+  * `sitemaps_content_write`
+  
 **2015-08-05**
 * Added new [grouped scopes](./sections/scopes.md):
   * `sitemaps_all_read`
