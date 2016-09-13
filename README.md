@@ -24,45 +24,60 @@ Once you have authenticated, you can get information about the authenticated use
 
 You can perform up to 25 requests per 10 second period on an account with one OAuth token. If you exceed this limit, you'll get a 403 Rate Limit Exceeded response for subsequent requests. Check the Retry-After header to see how many seconds to wait before retrying the request.
 
-## Response Codes
+## [Response Codes](./sections/responses.md)
 
 * `200` OK
 * `201` Created
-* `204` No Content
-* `400` Bad Request
+* `204` No content
+* `400` Bad Request / Validation errors
 * `401` Unauthorized
-* `403` Forbidden
-* `404` Not Found
+* `403` Access denied / Insufficient scope
+* `404` Not found
 * `5xx` Slickplan is having trouble
 
 ## Endpoints
 
+### Account
 * Account
   * [Company](./endpoints/account/company.md)
   * [Invoices](./endpoints/account/invoices.md)
   * [Messages](./endpoints/account/messages.md)
+  * [Preferences](./endpoints/account/preferences.md)
+* [Me](./endpoints/me.md)
+* [Users](./endpoints/users.md)
+
+### Sitemaps
 * [Color Palettes](./endpoints/palettes.md)
 * [Comments](./endpoints/comments.md)
-* [Me](./endpoints/me.md)
 * [Page Types](./endpoints/archetypes.md)
 * [Sitemaps](./endpoints/sitemaps.md)
   * [Diagrams](./endpoints/sitemaps/diagrams.md)
   * [Options](./endpoints/sitemaps/options.md)
   * [Page Details/Content](./endpoints/sitemaps/page.md)
   * [Structure](./endpoints/sitemaps/structure.md)
-* [Users](./endpoints/users.md)
 
 ## Sections
 
 * [Authentication](./sections/authentication.md)
+* [Sample Responses](./sections/responses.md)
 * [Scopes](./sections/scopes.md)
 * [User Plans](./endpoints/me.md#user-plans)
 * [User Types](./endpoints/me.md#user-types)
 
 ## Changes
 
+**2016-09-12**
+* Added new endpoints:
+  * Account > [Preferences](./endpoints/account/preferences.md)
+* Added new [scopes](./sections/scopes.md):
+  * `account_preferences_read`
+  * `account_preferences_write`
+* Added [Sample Responses](./sections/responses.md) page
+* Updated [email messages](./endpoints/account/messages.md)
+* Removed `warn_before_leaving_page` setting ([Preferences](./endpoints/account/preferences.md))
+  
 **2015-12-21**
-* All dates are now in UTC timezone
+* All dates are now in UTC timezone, Atom format
 * Value of `version` in sitemap structures is now a string instead of integer
 * Removed `childs` key from sitemap structures, you can use `parent` to build hierarchy
 * Added new endpoints:

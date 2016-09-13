@@ -1,6 +1,6 @@
 # Sitemap Color Palettes
 
-## Get all color palettes
+## Get all custom color palettes
 
 * `GET /v1/palettes`
 * Required scope: `sitemaps_read` or `sitemaps_color_palettes_read` or `sitemaps_color_palettes_write`
@@ -31,15 +31,18 @@
     }
 ]
 ```
+
+Possible other [responses](./../sections/responses.md): `403`.
+
 Key | Type | Description
 --- | --- | ---
-id | integer/string | Unique identifier of the color palette.
-name | string | Color palette name.
-colors | array | Array of colors in HEX format, max. 10 colors.
+id | integer/string | Unique identifier of the color palette
+name | string | Color palette name
+colors | array | Array of colors in HEX format - min. 1 color, max. 10 colors
 
 ## Get single color palette
 
-* `GET /v1/palettes/<key>` (ex. `GET /v1/palettes/ajkqosjh`)
+* `GET /v1/palettes/<id>` (ex. `GET /v1/palettes/ajkqosjh`)
 * Required scope: `sitemaps_read` or `sitemaps_color_palettes_read` or `sitemaps_color_palettes_write`
 
 ### Response
@@ -57,12 +60,14 @@ colors | array | Array of colors in HEX format, max. 10 colors.
 }
 ```
 
+Possible other [responses](./../sections/responses.md): `403` and `404`.
+
 ## Create new color palette
 
 * `POST /v1/palettes`
 * Required scope: `sitemaps_color_palettes_write`
 
-Will create a new color palette from the parameters passed and return the JSON representation of the created palette. If the user does not have access to create color palettes you'll see `403 Forbidden`. Validations messages return with `400` HTTP code.
+Will create a new color palette from the parameters passed, return `201 Created` and the JSON representation of the created palette (same format as `GET /v1/palettes/<id>`). Possible other [responses](./../sections/responses.md): `400` and `403`.
 
 ### Sample request
 ``` json
@@ -79,10 +84,10 @@ Will create a new color palette from the parameters passed and return the JSON r
 
 ## Update color palette
 
-* `PUT /v1/palettes/<key>` (ex. `PUT /v1/palettes/ajkqosjh`)
+* `PUT /v1/palettes/<id>` (ex. `PUT /v1/palettes/ajkqosjh`)
 * Required scope: `sitemaps_color_palettes_write`
 
-Will update the new color palette from the parameters passed and return the JSON representation of the updated palette. If the user does not have access to update color palette you'll see `403 Forbidden`. Validations messages return with `400` HTTP code.
+Will update the new color palette from the parameters passed and return the JSON representation of the updated palette. Possible other [responses](./../sections/responses.md): `400`, `403` and `404`.
 
 ### Sample request
 ``` json
@@ -99,7 +104,7 @@ Will update the new color palette from the parameters passed and return the JSON
 
 ## Delete color palette
 
-* `DELETE /v1/palettes/<key>` (ex. `PUT /v1/palettes/ajkqosjh`)
+* `DELETE /v1/palettes/<id>` (ex. `PUT /v1/palettes/ajkqosjh`)
 * Required scope: `sitemaps_color_palettes_write`
 
-Will delete the specified color palette and return `204 No Content` if that was successful. If the user does not have access to delete the color palette you'll see `403 Forbidden`.
+Will delete the specified color palette and return `204 No Content` if that was successful. Possible other [responses](./../sections/responses.md): `403` and `404`.

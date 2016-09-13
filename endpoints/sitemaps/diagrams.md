@@ -1,6 +1,6 @@
 # Sitemap diagrams
 
-**Note:** it’s not possible to fetch archived sitemaps’ diagrams, you will get `HTTP 403 Forbidden` response.
+**Note:** it’s not possible to fetch archived sitemaps’ diagrams, you will get `HTTP 403 Sitemap archived` response.
 
 ## Get a list of diagrams
 
@@ -24,10 +24,13 @@
     }
 ]
 ```
+
+Possible other [responses](./../../sections/responses.md): `403` and `404`.
+
 Key | Type | Description
 --- | --- | ---
-id | string | Unique diagram ID.
-name | string | Diagram name.
+id | string | Unique diagram ID
+name | string | Diagram name
 
 ## Get single diagram data
 
@@ -108,8 +111,11 @@ name | string | Diagram name.
     ]
 }
 ```
+
+Possible other [responses](./../../sections/responses.md): `403` and `404`.
+
 Key | Type | Description
 --- | --- | ---
-bbox | array | Diagram container size and coordinates of a first element.
+bbox | array | Diagram container size and coordinates of a first element
 elements | array | List of diagrams elements
-connections | array | List of diagrams elements’ connection lines.
+connections | array | List of diagrams elements’ connection lines

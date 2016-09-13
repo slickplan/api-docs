@@ -1,6 +1,6 @@
 # Sitemap page details
 
-See how to get a sitemap's pages list on the (structure endpoint)[./structure.md]. **Note:** it's not possible to fetch archived sitemaps, you will get `HTTP 403 Forbidden` response.
+See how to get a sitemap's pages list on the (structure endpoint)[./structure.md]. **Note:** it’s not possible to fetch archived sitemaps, you will get `HTTP 403 Sitemap archived` response.
 
 ## Get a single page details
 
@@ -27,25 +27,31 @@ See how to get a sitemap's pages list on the (structure endpoint)[./structure.md
             "page": "svga5c8wc1b9t2dwppi"
         }
     ],
-    "section": "svgnq3nac4e1dzr8z0l"
+    "section": "svgnq3nac4e1dzr8z0l",
+    "has_diagrams": false,
+    "has_files": false,
+    "has_content": false
 }
 ```
+
+Possible other [responses](./../../sections/responses.md): `403` and `404`.
+
 Key | Type | Description
 --- | --- | ---
-id | string | Sitemap unique page ID.
-level | string/integer | Page level: `home`, `util`, `foot` or an integer.
-text | string | Page label.
-order | integer | Page level order, to use with `ORDER BY`.
-color | string | Page background color.
-textcolor | string | Page text color.
-archetype | string | Page type ID.
-parent | string | Parent page ID.
-desc | string | Page note.
-url | array | Array of page's links.
-section | string | Page's subsection ID.
-has_diagrams | boolean | `true` if page has diagrams.
-has_files | boolean | `true` if page has design mockups.
-has_content | boolean | `true` if page has content.
+id | string | Sitemap unique page ID
+level | string/integer | Page level: `home`, `util`, `foot` or an integer
+text | string | Page label
+order | integer | Page level order, to use with `ORDER BY`
+color | string | Page background color
+textcolor | string | Page text color
+archetype | string | Page type ID
+parent | string | Parent page ID
+desc | string | Page note
+url | array | Array of page's links
+section | string | Page's subsection ID
+has_diagrams | boolean | `true` if page has diagrams
+has_files | boolean | `true` if page has design mockups
+has_content | boolean | `true` if page has content
 
 # Get a single page diagrams list
 
@@ -61,6 +67,8 @@ See the [diagrams](./diagrams.md) endpoint for details on how to get diagrams st
     "svgdiagramfbevytik65zzew67"
 ]
 ```
+
+Possible other [responses](./../../sections/responses.md): `403` and `404`.
 
 # Get a single page files list
 
@@ -88,14 +96,17 @@ See the [diagrams](./diagrams.md) endpoint for details on how to get diagrams st
     }
 ]
 ```
+
+Possible other [responses](./../../sections/responses.md): `403` and `404`.
+
 Key | Type | Description
 --- | --- | ---
-id | string | Unique file ID.
-date | string | File uploaded date in ISO 8601 format.
-filename | string | Original file name.
-filesize | integer | File size in bytes.
-type | string | File type, one of: `image`, `video`, `file`.
-url | string | An URL to download file from, the link expires after 24 hours.
+id | string | Unique file ID
+date | string | File uploaded date in Atom format
+filename | string | Original file name
+filesize | integer | File size in bytes
+type | string | File type, one of: `image`, `video`, `file`
+url | string | An URL to download file from, the link expires after 24 hours
 
 # Get a single page content
 
@@ -113,12 +124,20 @@ url | string | An URL to download file from, the link expires after 24 hours.
         {
             "id": "tkhccdtv3n3qxayk",
             "type": "wysiwyg",
-            "content": "<h1>This is a HTML content.<\/h1>"
+            "content": "<h1>This is a HTML content.<\/h1>",
+            "options": {
+                "tag": "span"
+            }
         },
         {
             "id": "k6531vbj1iabe2jn",
             "type": "text",
-            "content": "Plain text"
+            "content": "Plain text",
+            "options": {
+                "tag": "html"
+                "tag_html_before": "<hr><strong>Text:</strong><br>",
+                "tag_html_after": "<br>"
+            }
         },
         {
             "id": "tsmak6jhhb17z1go",
@@ -180,18 +199,22 @@ url | string | An URL to download file from, the link expires after 24 hours.
     ]
 }
 ```
+
+Possible other [responses](./../../sections/responses.md): `403` and `404`.
+
 Key | Type | Description
 --- | --- | ---
-url_slug | string | Page's URL slug.
-template | string | Content template used.
-status | string | Current status of this page.
-assignee | integer | A person assigned to this page.
-body | array | Content body.
+url_slug | string | Page's URL slug
+template | string | Content template used
+status | string | Current status of this page
+assignee | integer | A person assigned to this page
+body | array | Content body
 
 #### Content body
 
 Key | Type | Description
 --- | --- | ---
-id | string | Unique element ID.
-type | string | Element type, one of: `wysiwyg`, `text`, `image`, `video`, `file`, `table`.
-content | string/array | Element content.
+id | string | Unique element ID
+type | string | Element type, one of: `wysiwyg`, `text`, `image`, `video`, `file`, `table`
+content | string/array | Element content
+options | array | Element options, one of: `tag`, `tag_class`, `tag_id`, `tag_html_before`, `tag_html_after`

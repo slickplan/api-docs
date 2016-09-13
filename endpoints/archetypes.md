@@ -11,84 +11,42 @@
     {
         "id": "_form",
         "name": "Form",
-        "icon": ""
+        "icon": "",
+        "description": "(...)"
     },
     {
         "id": "_listing",
         "name": "Listing",
-        "icon": ""
-    },
-    {
-        "id": "_portal",
-        "name": "Portal",
-        "icon": ""
-    },
-    {
-        "id": "_consumption",
-        "name": "Consumption",
-        "icon": ""
-    },
-    {
-        "id": "_consumptionstack",
-        "name": "Consumption Stack",
-        "icon": ""
-    },
-    {
-        "id": "_gallery",
-        "name": "Gallery",
-        "icon": ""
-    },
-    {
-        "id": "_dialog",
-        "name": "Dialog",
-        "icon": ""
-    },
-    {
-        "id": "_process",
-        "name": "Process",
-        "icon": ""
-    },
-    {
-        "id": "_interactive",
-        "name": "Interactive",
-        "icon": ""
-    },
-    {
-        "id": "_file",
-        "name": "File",
-        "icon": ""
-    },
-    {
-        "id": "_fragment",
-        "name": "Fragment",
-        "icon": ""
-    },
-    {
-        "id": "_external",
-        "name": "External",
-        "icon": ""
+        "icon": "",
+        "description": "(...)"
     },
     {
         "id": "nrjnfxutxwpitsv",
         "name": "Deleted",
-        "icon": "fa-ban"
+        "icon": "fa-ban",
+        "description": ""
     },
     {
         "id": "zfazcrkdhsvna",
         "name": "Custom page type",
-        "icon": ""
+        "icon": "C",
+        "description": "(...)"
     }
 ]
 ```
+
+Possible other [responses](./../sections/responses.md): `403`.
+
 Key | Type | Description
 --- | --- | ---
-id | integer | Unique identifier of the page type, read-only are prefixed with `_`.
-name | string | Page type name.
-icon | string | Page type icon - default one if empty or [FontAwesome 4.3](http://fortawesome.github.io/Font-Awesome/) class name.
+id | integer | Unique identifier of the page type, read-only are prefixed with `_`
+name | string | Page type name
+icon | string | Page type icon - a single letter or [FontAwesome](http://fortawesome.github.io/Font-Awesome/) CSS class name
+description | string | Page type description
 
 ## Get single page type
 
-* `GET /v1/archetypes/<key>` (ex. `GET /v1/archetypes/_external`)
+* `GET /v1/archetypes/<id>` (ex. `GET /v1/archetypes/_external`)
 * Required scope: `sitemaps_read` or `sitemaps_page_types_read` or `sitemaps_page_types_write`
 
 ### Response
@@ -96,45 +54,48 @@ icon | string | Page type icon - default one if empty or [FontAwesome 4.3](http:
 {
     "id": "_external",
     "name": "External",
-    "icon": ""
+    "icon": "",
+    "description": "(...)"
 }
 ```
+
+Possible other [responses](./../sections/responses.md): `403` and `404`.
 
 ## Create new page type
 
 * `POST /v1/archetypes`
 * Required scope: `sitemaps_page_types_write`
 
-Will create a new custom page type from the parameters passed and return the JSON representation of the created custom page type. If the user does not have access to create page type you'll see `403 Forbidden`. Validations messages return with `400` HTTP code.
+Will create a new custom page type from the parameters passed and return the JSON representation of the created custom page type. Possible other [responses](./../sections/responses.md): `400`, `403`.
 
 ### Sample request
 ``` json
 {
     "name": "My page type",
-    "icon": "fa-database"
+    "icon": "fa-database",
+    "description": "This is my custom page type with FontAwesome icon"
 }
 ```
 
 ## Update page type
 
-* `PUT /v1/archetypes/<key>` (ex. `PUT /v1/archetypes/nrjnfxutxwpitsv`)
+* `PUT /v1/archetypes/<id>` (ex. `PUT /v1/archetypes/nrjnfxutxwpitsv`)
 * Required scope: `sitemaps_page_types_write`
 
-Will update the custom page type from the parameters passed and return the JSON representation of the custom page type. If the user does not have access to update page type you'll see `403 Forbidden`. Validations messages return with `400` HTTP code.
+Will update the custom page type from the parameters passed and return the JSON representation of the custom page type. Possible other [responses](./../sections/responses.md): `400`, `403` and `404`.
 
 Only custom page types can be edited, read-only page types IDs are prefixed with `_`.
 
 ### Sample request
 ``` json
 {
-    "name": "New page type name",
-    "icon": ""
+    "name": "New page type name"
 }
 ```
 
 ## Delete page type
 
-* `DELETE /v1/archetypes/nrjnfxutxwpitsv`
+* `DELETE /v1/archetypes/<id>`
 * Required scope: `sitemaps_page_types_write`
 
-Will delete the specified page type and return `204 No Content` if that was successful. If the user does not have access to delete the page type you'll see `403 Forbidden`.
+Will delete the specified page type and return `204 No Content` if that was successful. Possible other [responses](./../sections/responses.md): `403` and `404`.

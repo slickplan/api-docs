@@ -1,6 +1,6 @@
 # Sitemap options
 
-**Note:** it's not possible to fetch archived sitemaps, you will get `HTTP 403 Forbidden` response.
+**Note:** it’s not possible to fetch archived sitemaps, you will get `HTTP 403 Sitemap archived` response.
 
 ## Get the sitemap options
 
@@ -31,24 +31,27 @@
     }
 }
 ```
+
+Possible other [responses](./../../sections/responses.md): `403` and `404`.
+
 Key | Type | Description
 --- | --- | ---
-id | string | Sitemap section ID.
-template | string | Sitemap orientation: `horizontal` or `vertical`.
-design | string | Sitemap pages design type: `gradient` or `flat`.
-color_scheme | string/array | Sitemap color scheme: `default` or an array of colors.
-text_shadow | boolean | `true` if there should be a text shadow on pages.
+id | string | Sitemap section ID
+template | string | Sitemap orientation: `horizontal` or `vertical`
+design | string | Sitemap pages design type: `gradient` or `flat`
+color_scheme | string/array | Sitemap color scheme: `default` or an array of colors
+text_shadow | boolean | `true` if there should be a text shadow on pages
 
 #### `color_scheme` Array
 Key | Description
 --- | ---
-default | Default page color.
-home | Home page color.
-util | Utility page color.
-foot | Footer page color.
-lines | Connection lines color.
-text | Text color.
-levelN | Level `N` page color where `N` is an integer.
+default | Default page color
+home | Home page color
+util | Utility page color
+foot | Footer page color
+lines | Connection lines color
+text | Text color
+levelN | Specified level’s page color where `N` is an integer
 
 ## Get the specified section options
 
@@ -71,12 +74,14 @@ levelN | Level `N` page color where `N` is an integer.
 }
 ```
 
+Possible other [responses](./../../sections/responses.md): `403` and `404`.
+
 ## Update section options
 
 * `PUT /v1/sitemaps/<sitemap_id>/options/<section_id>`
 * Required scope: `sitemaps_write`; `sitemaps_color_palettes_write` for `design`, `color_scheme` and `text_shadow` modification
 
-Will update the sitemap options from the parameters passed and return the JSON representation of the updated sitemap. If the user does not have access to update the sitemap options you'll see `403 Forbidden`. Validations messages return with `400` HTTP code.
+Will update the sitemap options from the parameters passed and return the JSON representation of the updated sitemap. Possible other [responses](./../../sections/responses.md): `400`, `403` and `404`.
 
 ### Sample request
 ``` json

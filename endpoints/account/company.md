@@ -12,23 +12,28 @@
     "company_name_2": "Flowchart Software",
     "subdomain": "example",
     "site_color": "#008DF5",
-    "use_dark_font": false
+    "use_dark_font": false,
+    "billing_address": ""
 }
 ```
+
+Possible other [responses](./../../sections/responses.md): `403`.
+
 Key | Type | Description
 --- | --- | ---
-company_name | string | Company name.
-company_name_2 | string | Company name, second line.
-subdomain | string | Account's subdomain (<subdomain>.slickplan.com).
-site_color | string | Account branding color in HEX format or `false` if no account branding is available for current user's plan.
-use_dark_font | string | Account branding font color - `true` for dark gray, `false` for white.
+company_name | string | Company name
+company_name_2 | string | Company name, second line
+subdomain | string | Account’s subdomain (`<subdomain>`.slickplan.com)
+site_color | string | Account branding color in HEX format or `false` if no account branding is available for current user’s plan
+use_dark_font | string | Account branding font color - `true` for dark gray, `false` for white
+billing_address | string | Billing address for invoices
 
 ## Update setting
 
 * `PUT /v1/account/company`
 * Required scope: `company_settings_write`
 
-Will update the company settings from the parameters passed and return the JSON representation of the settings. If the user does not have access to update company settings you'll see `403 Forbidden`. Validations messages return with `400` HTTP code.
+Will update the company settings from the parameters passed and return the JSON representation of the current settings. Possible other [responses](./../../sections/responses.md): `400` and `403`.
 
 ### Sample request
 ``` json
@@ -37,6 +42,7 @@ Will update the company settings from the parameters passed and return the JSON 
     "company_name_2": "Our new slogan",
     "subdomain": "example2",
     "site_color": "#FF3366",
-    "use_dark_font": true
+    "use_dark_font": true,
+    "billing_address": "PO Box 123"
 }
 ```

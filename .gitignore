@@ -1,0 +1,14 @@
+.DS_Store
+.DS_Store?
+.idea
+._*
+.Spotlight-V100
+.Trashes
+.gitkeep
+ehthumbs.db
+Thumbs.db
+composer.phar
+composer.lock
+Homestead.yaml
+Homestead.json
+/node_modules/
