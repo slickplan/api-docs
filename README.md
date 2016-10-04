@@ -100,4 +100,4 @@ You can perform up to 25 requests per 10 second period on an account with one OA
 
 ## Support
 
-Having trouble with this API? Contact us directly via email [support@slickplan.com](mailto:support@slickplan.com).
+Having trouble with this API? Contact us directly via email [help@slickplan.com](mailto:help@slickplan.com).
