@@ -66,6 +66,10 @@ You can perform up to 25 requests per 10 second period on an account with one OA
 
 ## Changes
 
+**2016-11-11**
+* Updated [Color Palettes](./endpoints/account/messages.md) `colors` array format - each item is now an object with `background` (background color), `text` (text color) and `level` (assigned sitemap page level) attributes
+* Added `email_invoices` setting to ([Preferences](./endpoints/account/preferences.md))
+
 **2016-09-12**
 * Added new endpoints:
   * Account > [Preferences](./endpoints/account/preferences.md)
@@ -73,8 +77,10 @@ You can perform up to 25 requests per 10 second period on an account with one OA
   * `account_preferences_read`
   * `account_preferences_write`
 * Added [Sample Responses](./sections/responses.md) page
-* Updated [email messages](./endpoints/account/messages.md)
-* Removed `warn_before_leaving_page` setting ([Preferences](./endpoints/account/preferences.md))
+* Updated [email messages](./endpoints/account/messages.md):
+  * removed deprecated messages: `forgotten_password`, `forgotten_username`, `register_confirmation`, `user_invitation_sitemap`, `user_invitation_sitemap_exists`
+  * added new messages: `user_invitation_role`, `user_invitation_permission`, `user_invitation_role_permission`, `approved_sitemap`, `request_unlock`, `sitemap_unlocked`
+* Removed `warn_before_leaving_page` setting since it is always enabled on all accounts ([Preferences](./endpoints/account/preferences.md))
   
 **2015-12-21**
 * All dates are now in UTC timezone, Atom format

@@ -12,21 +12,47 @@
         "id": 1407165182,
         "name": "Sample Palette",
         "colors": [
-            "#ddcbd7",
-            "#de3355",
-            "#2835a6",
-            "#e6d62b"
+            {
+                "level": "default",
+                "background": "#ddcbd7",
+                "text": "#de3355"
+            },
+            {
+                "level": 1,
+                "background": "#2835a6",
+                "text": null
+            },
+            {
+                "level": "home",
+                "background": null,
+                "text": "#e6d62b"
+            },
+            {
+                "level": "archetype-_dialog",
+                "background": null,
+                "text": "#e6d62b"
+            }
         ]
     },
     {
         "id": "ajkqosjh",
         "name": "Blues",
         "colors": [
-            "#5f2be6",
-            "#342be6",
-            "#2b61e6",
-            "#2ba2e6",
-            "#2bd3e6"
+            {
+                "level": 1,
+                "background": "#2b61e6",
+                "text": "#2bd3e6"
+            },
+            {
+                "level": 2,
+                "background": "#2835a6",
+                "text": null
+            },
+            {
+                "level": "archetype-kjiajhj",
+                "background": null,
+                "text": "#5f2be6"
+            }
         ]
     }
 ]
@@ -38,7 +64,7 @@ Key | Type | Description
 --- | --- | ---
 id | integer/string | Unique identifier of the color palette
 name | string | Color palette name
-colors | array | Array of colors in HEX format - min. 1 color, max. 10 colors
+colors | array | Array of colors in HEX format - min. 1, max. 16 items
 
 ## Get single color palette
 
@@ -51,11 +77,21 @@ colors | array | Array of colors in HEX format - min. 1 color, max. 10 colors
     "id": "ajkqosjh",
     "name": "Blues",
     "colors": [
-        "#5f2be6",
-        "#342be6",
-        "#2b61e6",
-        "#2ba2e6",
-        "#2bd3e6"
+        {
+            "level": 1,
+            "background": "#2b61e6",
+            "text": "#2bd3e6"
+        },
+        {
+            "level": 2,
+            "background": "#2835a6",
+            "text": null
+        },
+        {
+            "level": "archetype-kjiajhj",
+            "background": null,
+            "text": "#5f2be6"
+        }
     ]
 }
 ```
@@ -74,10 +110,21 @@ Will create a new color palette from the parameters passed, return `201 Created`
 {
     "name": "Red-ish",
     "colors": [
-        "#e66e2b",
-        "#e63c2b",
-        "#e62b45",
-        "#e62b77"
+        {
+            "level": 1,
+            "background": "#2b61e6",
+            "text": "#2bd3e6"
+        },
+        {
+            "level": 2,
+            "background": "#2835a6",
+            "text": null
+        },
+        {
+            "level": "archetype-kjiajhj",
+            "background": null,
+            "text": "#5f2be6"
+        }
     ]
 }
 ```
@@ -94,10 +141,21 @@ Will update the new color palette from the parameters passed and return the JSON
 {
     "name": "All kind of red",
     "colors": [
-        "#e66e2b",
-        "#e63c2b",
-        "#e62b45",
-        "#e62b77"
+        {
+            "level": 1,
+            "background": "#2b61e6",
+            "text": "#2bd3e6"
+        },
+        {
+            "level": 2,
+            "background": "#2835a6",
+            "text": null
+        },
+        {
+            "level": "archetype-kjiajhj",
+            "background": null,
+            "text": "#5f2be6"
+        }
     ]
 }
 ```
