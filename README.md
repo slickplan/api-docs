@@ -66,7 +66,7 @@ You can perform up to 25 requests per 10 second period on an account with one OA
 
 ## Changes
 
-**2016-11-11**
+**2016-11-20**
 * Updated [Color Palettes](./endpoints/account/messages.md) `colors` array format - each item is now an object with `background` (background color), `text` (text color) and `level` (assigned sitemap page level) attributes
 * Added `email_invoices` setting to ([Preferences](./endpoints/account/preferences.md))
 
