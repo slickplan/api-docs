@@ -84,7 +84,7 @@ Possible other [responses](./../../sections/responses.md): `403` and `404`.
         "filename": "IMG_9785.jpg",
         "filesize": 338531,
         "type": "image",
-        "url": "http://example.slickplan.com/file/get/(...)"
+        "url": "https:\/\/example.slickplan.com\/file\/get/(...)"
     },
     {
         "id": "ihiIk4ntz3iDDw89hDh04CfOHPdwuXsW",
@@ -92,7 +92,7 @@ Possible other [responses](./../../sections/responses.md): `403` and `404`.
         "filename": "Video_9786.mov",
         "filesize": 128716,
         "type": "video",
-        "url": "http://example.slickplan.com/file/get/(...)"
+        "url": "https:\/\/example.slickplan.com\/file\/get/(...)"
     }
 ]
 ```
@@ -134,7 +134,7 @@ url | string | An URL to download file from, the link expires after 24 hours
             "type": "text",
             "content": "Plain text",
             "options": {
-                "tag": "html"
+                "tag": "html",
                 "tag_html_before": "<hr><strong>Text:</strong><br>",
                 "tag_html_after": "<br>"
             }
