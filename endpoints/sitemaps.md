@@ -95,7 +95,7 @@ Key | Type | Description
 --- | --- | ---
 id | integer | Unique identifier of the sitemap version
 version | string | Version number
-uri_alias | string | A sitemap alias for sitemap preview: `http://slickplan.com/<alias>`
+uri_alias | string | A sitemap alias for sitemap preview: `https://example.slickplan.com/<alias>`
 date_created | string | Sitemap creation date in Atom format
 date_modified | string | Last modification date in Atom format
 

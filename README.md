@@ -37,7 +37,7 @@ You can perform up to 25 requests per 10 second period on an account with one OA
 
 ## Endpoints
 
-### Account
+### Account & Settings
 * Account
   * [Company](./endpoints/account/company.md)
   * [Invoices](./endpoints/account/invoices.md)
@@ -46,17 +46,17 @@ You can perform up to 25 requests per 10 second period on an account with one OA
 * [Me](./endpoints/me.md)
 * [Users](./endpoints/users.md)
 
-### Sitemaps
+### Projects
 * [Color Palettes](./endpoints/palettes.md)
 * [Comments](./endpoints/comments.md)
 * [Page Types](./endpoints/archetypes.md)
 * [Sitemaps](./endpoints/sitemaps.md)
-  * [Diagrams](./endpoints/sitemaps/diagrams.md)
+  * [Assigned Diagrams](./endpoints/sitemaps/diagrams.md)
   * [Options](./endpoints/sitemaps/options.md)
-  * [Page Details/Content](./endpoints/sitemaps/page.md)
+  * [Sitemap Page](./endpoints/sitemaps/page.md): [Details](./endpoints/sitemaps/page.md#get-a-single-page-details)/[Diagrams](./endpoints/sitemaps/page.md#get-a-single-page-diagrams-list)/[Files](./endpoints/sitemaps/page.md#get-a-single-page-files-list)/[Content](./endpoints/sitemaps/page.md#get-a-single-page-content)
   * [Structure](./endpoints/sitemaps/structure.md)
 
-## Sections
+## Informations
 
 * [Authentication](./sections/authentication.md)
 * [Sample Responses](./sections/responses.md)

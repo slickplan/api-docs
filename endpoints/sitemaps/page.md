@@ -53,7 +53,7 @@ has_diagrams | boolean | `true` if page has diagrams
 has_files | boolean | `true` if page has design mockups
 has_content | boolean | `true` if page has content
 
-# Get a single page diagrams list
+## Get a single page diagrams list
 
 * `GET /v1/sitemaps/<sitemap_id>/page/<page_id>/diagrams`
 * Required scope: `sitemaps_diagrams_read` or `sitemaps_diagrams_write`
@@ -70,7 +70,7 @@ See the [diagrams](./diagrams.md) endpoint for details on how to get diagrams st
 
 Possible other [responses](./../../sections/responses.md): `403` and `404`.
 
-# Get a single page files list
+## Get a single page files list
 
 * `GET /v1/sitemaps/<sitemap_id>/page/<page_id>/files`
 * Required scope: `sitemaps_files_read` or `sitemaps_files_write`
@@ -108,7 +108,7 @@ filesize | integer | File size in bytes
 type | string | File type, one of: `image`, `video`, `file`
 url | string | An URL to download file from, the link expires after 24 hours
 
-# Get a single page content
+## Get a single page content
 
 * `GET /v1/sitemaps/<sitemap_id>/page/<page_id>/content`
 * Required scope: `sitemaps_content_read` or `sitemaps_content_write`
