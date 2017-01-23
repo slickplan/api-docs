@@ -135,7 +135,7 @@ url | string | An URL to download file from, the link expires after 24 hours
             "content": "Plain text",
             "options": {
                 "tag": "html",
-                "tag_html_before": "<hr><strong>Text:</strong><br>",
+                "tag_html_before": "<hr><strong>Text:<\/strong><br>",
                 "tag_html_after": "<br>"
             }
         },
