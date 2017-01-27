@@ -207,7 +207,7 @@ Key | Type | Description
 url_slug | string | Page's URL slug
 template | string | Content template used
 status | string | Current status of this page
-assignee | integer | A person assigned to this page
+assignee | integer/array | A person assigned to this page or an array of assigned people
 body | array | Content body
 
 #### Content body

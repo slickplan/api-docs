@@ -66,8 +66,12 @@ You can perform up to 25 requests per 10 second period on an account with one OA
 
 ## Changes
 
+**2017-01-28**
+* Added new method (`PUT /v1/comments/<sitemap_id>/<comment_id>`) to the [Comments](./endpoints/comments.md#update-a-comment) endpoint
+* Since today you can assign multiple people to Content Planner page, so the [`assignee` element](./endpoints/sitemaps/page.md#get-a-single-page-content) can also return an array
+
 **2016-11-20**
-* Updated [Color Palettes](./endpoints/account/messages.md) `colors` array format - each item is now an object with `background` (background color), `text` (text color) and `level` (assigned sitemap page level) attributes
+* Updated [Color Palettes](./endpoints/palettes.md) `colors` array format - each item is now an object with `background` (background color), `text` (text color) and `level` (assigned sitemap page level) attributes
 * Added `email_invoices` setting to ([Preferences](./endpoints/account/preferences.md))
 
 **2016-09-12**

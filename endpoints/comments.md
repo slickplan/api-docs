@@ -127,6 +127,20 @@ Will create a new comment from the parameters passed and return the JSON represe
 }
 ```
 
+## Update a comment
+
+* `PUT /v1/comments/<sitemap_id>/<comment_id>`
+* Required scope: `sitemaps_comments_write`
+
+Will update the comment from the parameters passed and return the JSON representation of the updated comment. Possible other [responses](./../sections/responses.md): `400`, `403` and `404`.
+
+### Sample request
+``` json
+{
+    "comment": "<p><b>Updated<\/b> comment<\/p>"
+}
+```
+
 ## Delete comment
 
 * `DELETE /v1/comments/<sitemap_id>/2`
