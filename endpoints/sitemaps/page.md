@@ -126,6 +126,7 @@ url | string | An URL to download file from, the link expires after 24 hours
             "type": "wysiwyg",
             "content": "<h1>This is a HTML content.<\/h1>",
             "options": {
+                "label": "Please enter content here",
                 "tag": "span"
             }
         },
@@ -217,4 +218,4 @@ Key | Type | Description
 id | string | Unique element ID
 type | string | Element type, one of: `wysiwyg`, `text`, `image`, `video`, `file`, `table`
 content | string/array | Element content
-options | array | Element options, one of: `tag`, `tag_class`, `tag_id`, `tag_html_before`, `tag_html_after`
+options | array | Element options, one of: `label`, `tag`, `tag_class`, `tag_id`, `tag_html_before`, `tag_html_after`
