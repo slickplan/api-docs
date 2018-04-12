@@ -49,10 +49,11 @@ You can perform up to 25 requests per 10 second period on an account with one OA
 ### Projects
 * [Color Palettes](./endpoints/palettes.md)
 * [Comments](./endpoints/comments.md)
+* [Diagrams](./endpoints/diagrams.md)
 * [Page Types](./endpoints/archetypes.md)
 * [Sitemaps](./endpoints/sitemaps.md)
   * [Assigned Diagrams](./endpoints/sitemaps/diagrams.md)
-  * Content: [Templates](./endpoints/sitemaps/content.md)
+  * Content: [Templates](./endpoints/sitemaps/content.md)/[Site Settings](./endpoints/sitemaps/content.md#get-site-settings)
   * [Options](./endpoints/sitemaps/options.md)
   * [Sitemap Page](./endpoints/sitemaps/page.md): [Details](./endpoints/sitemaps/page.md#get-a-single-page-details)/[Diagrams](./endpoints/sitemaps/page.md#get-a-single-page-diagrams-list)/[Files](./endpoints/sitemaps/page.md#get-a-single-page-files-list)/[Content](./endpoints/sitemaps/page.md#get-a-single-page-content)
   * [Structure](./endpoints/sitemaps/structure.md)
@@ -66,6 +67,17 @@ You can perform up to 25 requests per 10 second period on an account with one OA
 * [User Types](./endpoints/me.md#user-types)
 
 ## Changes
+
+**2018-04-12**
+* Added new endpoints:
+  * [Diagrams](./endpoints/diagrams.md)
+  * [Site Settings](./endpoints/sitemaps/content.md#get-site-settings)
+* Added additional data to diagrams lists (`GET /v1/sitemaps/<sitemap_id>/diagrams` and `GET /v1/sitemaps/<sitemap_id>/diagrams/<diagram_id>`):
+  * `created_by`
+  * `date_created`
+  * `date_modified`
+  * `sitemap_id`
+* Updated `GET /v1/sitemaps/<sitemap_id>/page/<page_id>/diagrams` response so it has the same format as `GET /v1/diagrams`
 
 **2017-03-25**
 * Added new endpoints:

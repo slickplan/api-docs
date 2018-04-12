@@ -20,7 +20,7 @@ See how to get a sitemap's pages list on the (structure endpoint)[./structure.md
         {
             "type": "external",
             "label": "Link to Slickplan",
-            "url": "http:\/\/slickplan.com\/"
+            "url": "https:\/\/slickplan.com\/"
         },
         {
             "type": "internal",
@@ -61,12 +61,8 @@ has_content | boolean | `true` if page has content
 See the [diagrams](./diagrams.md) endpoint for details on how to get diagrams structures.
 
 ### Response
-``` json
-[
-    "svgdiagrampmkryv9ixxk0th9z",
-    "svgdiagramfbevytik65zzew67"
-]
-```
+
+Please see [GET /diagrams](./../diagrams.md#get-list-of-diagrams) endpoint. Response is a list of diagrams assigned to `page_id` in `sitemap_id`.
 
 Possible other [responses](./../../sections/responses.md): `403` and `404`.
 
