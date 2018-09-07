@@ -18,6 +18,7 @@
 ```
 
 Key | Description
+--- | ---
 new_comment_nofity | Email notification of new comments
 email_invoices | Send invoices via email
 us_date_formatting | US date formatting (m/d/y)
@@ -27,7 +28,7 @@ show_company_header | Show company header on shared sitemaps
 
 Possible other [responses](./../../sections/responses.md): `403`.
 
-**Note**: Please note a typo in `new_comment_**nofity**` setting, we are sorry for that, unfortunatelly it’s too late now to fix this :(
+**Note**: Please note a typo in `new_comment_nofity` setting, it should be `notification`, not `nofity` - we are sorry for that. Unfortunatelly it’s too late now to fix this :(
 
 ## Update setting
 
