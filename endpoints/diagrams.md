@@ -152,41 +152,7 @@ connections | array | List of diagrams elements’ connection lines
 ### Request
 ``` json
 {
-    "name": "New sitemap",
-    "sitemap_id": 1,
-    "cell_id": "svgz1wxw28i5deh25tt",
-    "bbox": {
-        "x": 7.5,
-        "y": 5,
-        "width": 1363.5,
-        "height": 315
-    },
-    "elements": [
-        {
-            "type": "file",
-            "label": "Test file element",
-            "id": "svggpymec2fypkzc47ov",
-            "matrix": [1, 0, 0, 1, 11.5, 8.5]
-        },
-        {
-            "type": "page",
-            "label": "Page label",
-            "cell_id": "svge2nmmk1wis05l9x5",
-            "id": "svgghejv3fd2fasa3kyg",
-            "matrix": [1, 0, 0, 1, 1101.5, 70.5]
-        }
-    ],
-    "connections": [
-        {
-            "from-direction": "right",
-            "from-element": "svggpymec2fypkzc47ov",
-            "to-direction": "up",
-            "to-element": "svgghejv3fd2fasa3kyg",
-            "type": "arrowtoblock",
-            "id": "svgpolylinevw8tforwvyna5utf",
-            "points": "111,45 1151,45 1151,68"
-        }
-    ]
+    "name": "New diagram"
 }
 ```
 
