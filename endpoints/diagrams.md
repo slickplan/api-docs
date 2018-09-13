@@ -141,8 +141,8 @@ Possible other [responses](./../sections/responses.md): `403` and `404`.
 Key | Type | Description
 --- | --- | ---
 bbox | array | Diagram container size and margin from the first elements
-elements | array | List of diagrams elements
-connections | array | List of diagrams elements’ connection lines
+elements | array | List of diagram’s elements
+connections | array | List of connection lines between elements
 
 ## Create a new diagram
 

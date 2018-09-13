@@ -69,7 +69,7 @@ page_id | string | Only if `file_id` is set; sitemap’s page ID where the Desig
         "comment": "New <a href=\"http:\/\/example.com\">comment<\/a>",
         "date": "2014-08-02T11:52:23+00:00",
         "file_id": "f3fsGeB9W7UooVSuXsWk4ntz3iDh04Cf",
-        "page_id": "svgdyt34vfijwcrlgoc"
+        "page_id": "svgdyt34vfijwcrlgoc",
         "replies": [
             {
                 "id": 3,
