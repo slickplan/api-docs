@@ -33,7 +33,7 @@ You can perform up to 25 requests per 10 second period on an account with one OA
 * `401` Unauthorized
 * `403` Access denied / Insufficient scope
 * `404` Not found
-* `5xx` Slickplan is having trouble
+* `5xx` Slickplan is having trouble 🤒
 
 ## Endpoints
 
