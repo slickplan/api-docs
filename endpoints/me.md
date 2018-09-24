@@ -35,7 +35,7 @@ signed_up | string | Signed up date in Atom format
 account_uri | string | Account URI with trailing slash or empty if account has not been activated yet
 user_plan | integer | User plan, check the table below
 user_type | string | User type, check the table below
-is_active | boolean | `true` if account is active, `false` is [suspended](https://help.slickplan.com/hc/en-us/articles/207020716)
+is_active | boolean | `true` if account is active, `false` if [suspended](https://help.slickplan.com/hc/en-us/articles/207020716)
 
 ## Update current user data
 
