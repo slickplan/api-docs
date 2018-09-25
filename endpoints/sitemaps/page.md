@@ -1,6 +1,6 @@
 # Sitemap page details
 
-See how to get a sitemap's pages list on the (structure endpoint)[./structure.md]. **Note:** it’s not possible to fetch archived sitemaps, you will get `HTTP 403 Sitemap archived` response.
+See how to get a sitemap's pages list on the [structure endpoint](./structure.md). **Note:** it’s not possible to fetch archived sitemaps, you will get `HTTP 403 Sitemap archived` response.
 
 ## Get a single page details
 
