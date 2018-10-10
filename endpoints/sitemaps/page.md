@@ -106,7 +106,7 @@ url | string | An URL to download file from, the link expires after 24 hours
 
 ## Get a single page content
 
-* `GET /v1/sitemaps/<sitemap_id>/page/<page_id>/content`
+* `GET /v1/sitemaps/<sitemap_id>/page/<page_id>/content` or `GET /v1/sitemaps/<sitemap_id>/page/<page_id>/content/<language>`
 * Required scope: `sitemaps_content_read` or `sitemaps_content_write`
 
 ### Response
@@ -116,6 +116,7 @@ url | string | An URL to download file from, the link expires after 24 hours
     "template": "",
     "status": "draft",
     "assignee": 82929,
+    "language": "en_US",
     "body": [
         {
             "id": "tkhccdtv3n3qxayk",
@@ -205,6 +206,7 @@ url_slug | string | Page's URL slug
 template | string | Content template used
 status | string | Current status of this page
 assignee | integer/array | A person assigned to this page or an array of assigned people
+language | string | Content language
 body | array | Content body
 
 #### Content body
@@ -215,3 +217,5 @@ id | string | Unique element ID
 type | string | Element type, one of: `wysiwyg`, `text`, `image`, `video`, `file`, `table`
 content | string/array | Element content
 options | array | Element options, one of: `label`, `tag`, `tag_class`, `tag_id`, `tag_html_before`, `tag_html_after`
+
+*Note:* If you have added multiple languages - this will return only the default's language content. To get content in other languages please add its identifier to the URL: `GET /v1/sitemaps/<sitemap_id>/page/<page_id>/content/<language>`. The list of available languages can be obtained [from the Site Settings](./content.md#get-site-settings).
