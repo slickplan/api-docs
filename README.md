@@ -68,6 +68,9 @@ You can perform up to 25 requests per 10 second period on an account with one OA
 
 ## Changes
 
+**2020-02-25**
+* Updated `GET /v1/sitemaps/<sitemap_id>/page/<page_id>/content` - added missing metadata to response
+
 **2018-04-12**
 * Added new endpoints:
   * [Diagrams](./endpoints/diagrams.md)

@@ -113,6 +113,9 @@ url | string | An URL to download file from, the link expires after 24 hours
 ``` json
 {
     "url_slug": "about-us",
+    "meta_title": "About Us - Our Website",
+    "meta_description": "This page is about us.",
+    "meta_keywords": "sample, keywords",
     "template": "",
     "status": "draft",
     "assignee": 82929,
@@ -203,6 +206,9 @@ Possible other [responses](./../../sections/responses.md): `403` and `404`.
 Key | Type | Description
 --- | --- | ---
 url_slug | string | Page's URL slug
+meta_title | string | Metadata: title
+meta_description | string | Metadata: description
+meta_keywords | string | Metadata: keywords
 template | string | Content template used
 status | string | Current status of this page
 assignee | integer/array | A person assigned to this page or an array of assigned people
