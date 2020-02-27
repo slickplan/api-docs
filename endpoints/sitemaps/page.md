@@ -106,7 +106,9 @@ url | string | An URL to download file from, the link expires after 24 hours
 
 ## Get a single page content
 
-* `GET /v1/sitemaps/<sitemap_id>/page/<page_id>/content` or `GET /v1/sitemaps/<sitemap_id>/page/<page_id>/content/<language>`
+* `GET /v1/sitemaps/<sitemap_id>/page/<page_id>/content`  
+or  
+`GET /v1/sitemaps/<sitemap_id>/page/<page_id>/content/<language>`
 * Required scope: `sitemaps_content_read` or `sitemaps_content_write`
 
 ### Response
@@ -144,8 +146,9 @@ url | string | An URL to download file from, the link expires after 24 hours
             "id": "tsmak6jhhb17z1go",
             "type": "image",
             "content": {
-                "url": "https:\/\/www.google.com\/images\/srpr\/logo11w.png",
-                "alt": "Google Logo",
+                "url": "https:\/\/example.slickplan.com\/file\/download/(...)",
+                "filename": "project-logo.jpg",
+                "alt": "Project Logo",
                 "title": ""
             }
         },
