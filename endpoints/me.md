@@ -29,7 +29,7 @@ email | string | Email address of the user
 username | string | Username of the user
 first_name | string | First name of the user
 last_name | string | Last name of the user
-timezone | string | User timezone, [supported list of timezones](http://php.net/manual/en/timezones.php)
+timezone | string | User timezone, [supported list of timezones](https://php.net/manual/en/timezones.php)
 last_login | string | Last login date in Atom format
 signed_up | string | Signed up date in Atom format
 account_uri | string | Account URI with trailing slash or empty if account has not been activated yet
@@ -60,9 +60,6 @@ Will update the currently authenticated user information from the parameters pas
 Name | Description
 --- | ---
 `1` | Free
-`2` | Basic (legacy)
-`3` | Premium (legacy)
-`4` | Unlimited (legacy)
 `5` | Basic
 `6` | Pro
 `7` | Team
@@ -74,4 +71,4 @@ Name | Description
 --- | ---
 `owner` | Account owner
 `admin` | An admin
-`contributor` | A contributor (editor/viewer)
+`contributor` | A contributor

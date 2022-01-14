@@ -5,8 +5,8 @@ We offer OAuth2 as the standard way to authenticate with our API as this offers 
 ## Getting started
 
 1. Register your app at [slickplan.com/api/register](https://slickplan.com/api/register).
-  You’ll be assigned a `client_id` and `client_secret`. You’ll need to provide a `redirect_uri`: a URL where we can send a verification code. Just enter a dummy URL like `http://example.com/oauth` if you’re not ready for this yet.
-2. [Grab an OAuth2 library](http://oauth.net/code/).
+  You’ll be assigned a `client_id` and `client_secret`. You’ll need to provide a `redirect_uri`: a URL where we can send a verification code. Just enter a dummy URL like `https://example.com/oauth` if you’re not ready for this yet.
+2. [Grab an OAuth2 library](https://oauth.net/code/).
 3. Configure your OAuth2 library with your `client_id`, `client_secret`, and `redirect_uri`.
 
   You’ll need to configure these URLs as well:
@@ -18,7 +18,7 @@ We offer OAuth2 as the standard way to authenticate with our API as this offers 
     --- | --- | ---
     client_id | string | **Required.** The client ID you received from Slickplan when you registered
     redirect_uri | string | **Required.** The URL in your app where users will be sent after authorization
-    state | string | **Required.** This is an unguessable random string, equivalent of a `CSRF` token, and provides session validation for your authorize request. See the [OAuth2.0 Spec](http://tools.ietf.org/html/rfc6749#section-4.1.1) for more information
+    state | string | **Required.** This is an unguessable random string, equivalent of a `CSRF` token, and provides session validation for your authorize request. See the [OAuth2.0 Spec](https://tools.ietf.org/html/rfc6749#section-4.1.1) for more information
     scope | string | A space separated list of [scopes](./scopes.md). If not provided, scope defaults to `user_read`
     
     If the user accepts your request, Slickplan redirects back to your site with a temporary code in a `code` parameter as well as the state you provided in the previous step in a `state` parameter. If the states don’t match, the request has been created by a third party and the process should be aborted.

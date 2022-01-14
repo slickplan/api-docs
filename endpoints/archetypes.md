@@ -41,8 +41,8 @@ Key | Type | Description
 --- | --- | ---
 id | integer | Unique identifier of the page type, read-only are prefixed with `_`
 name | string | Page type name
-icon | string | Page type icon - a single letter or [FontAwesome 4.7](https://fontawesome.com/v4.7.0/icons/) CSS class name
-description | string | Page type description
+icon | string | Page type icon - a single letter or [FontAwesome 4.7](https://fontawesome.com/v4.7/icons/) CSS class name
+description | string | Page type description in HTML format
 
 ## Get single page type
 

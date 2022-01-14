@@ -17,11 +17,12 @@
             "text": "Homepage",
             "order": 1,
             "id": "svgmld3kg61tyrrcjzb",
+            "diagrams": ["cjh2q933fowximgl"],
             "has_note": false,
             "has_url": false,
-            "has_content": true,
-            "has_files": false,
-            "has_diagrams": false
+            "has_content": { "en_US": true },
+            "has_files": ["4uDPRO9GKSZeudO0mePrjpl3tFkMST98", "KVzP7fr458Bl3VwIMz6mRTuHMxCQRGdk"],
+            "has_mockups": ["9UmqgnSmA8UsWfVkOeUd6wgEcguAfXNe"]
         },
         {
             "color": "#57aa34",
@@ -30,11 +31,12 @@
             "text": "Level 1",
             "order": 1000,
             "id": "svgz1wxw28i5deh25tt",
+            "diagrams": false,
             "has_note": false,
             "has_url": false,
-            "has_diagrams": false,
-            "has_files": true,
-            "has_content": false
+            "has_files": false,
+            "has_mockups": false,
+            "has_content": { "en_US": false, "pl_PL": true }
         },
         {
             "level": 2,
@@ -44,9 +46,9 @@
             "parent": "svgz1wxw28i5deh25tt",
             "has_note": false,
             "has_url": true,
-            "has_diagrams": false,
-            "has_files": true,
-            "has_content": false
+            "has_files": false,
+            "has_mockups": false,
+            "has_content": { "en_US": true }
         },
         {
             "color": "#cc2e2e",
@@ -57,9 +59,9 @@
             "id": "svgvcqzzz9gpzegqypa",
             "has_note": true,
             "has_url": false,
-            "has_diagrams": true,
             "has_files": false,
-            "has_content": true
+            "has_mockups": ["9UmqgnSmA8UsWfVkOeUd6wgEcguAfXNe", "61dYvYaor8xyBARljLfCMxaWUhTVQp9g"],
+            "has_content": { "en_US": true }
         }
     ],
     "svgtvberlfm9etj2iqp": [
@@ -70,9 +72,9 @@
             "id": "svgedzxjgdut1yndneo",
             "has_note": false,
             "has_url": false,
-            "has_diagrams": false,
             "has_files": false,
-            "has_content": true
+            "has_mockups": false,
+            "has_content": { "en_US": true }
         }
     ]
 }
@@ -96,11 +98,12 @@ See the description of a single page details on the (page endpoint)[./page.md].
         "text": "Homepage",
         "order": 1,
         "id": "svgmld3kg61tyrrcjzb",
+        "diagrams": ["cjh2q933fowximgl"],
         "has_note": false,
         "has_url": false,
-        "has_content": true,
-        "has_files": false,
-        "has_diagrams": false
+        "has_content": { "en_US": true },
+        "has_files": ["4uDPRO9GKSZeudO0mePrjpl3tFkMST98", "KVzP7fr458Bl3VwIMz6mRTuHMxCQRGdk"],
+        "has_mockups": ["9UmqgnSmA8UsWfVkOeUd6wgEcguAfXNe", "61dYvYaor8xyBARljLfCMxaWUhTVQp9g"]
     },
     {
         "color": "#57aa34",
@@ -109,11 +112,12 @@ See the description of a single page details on the (page endpoint)[./page.md].
         "text": "Level 1",
         "order": 1000,
         "id": "svgz1wxw28i5deh25tt",
+        "diagrams": false,
         "has_note": false,
         "has_url": false,
-        "has_diagrams": false,
-        "has_files": true,
-        "has_content": false
+        "has_files": false,
+        "has_mockups": false,
+        "has_content": { "en_US": true, "pl_PL": true },
     },
     {
         "level": 2,
@@ -123,9 +127,9 @@ See the description of a single page details on the (page endpoint)[./page.md].
         "parent": "svgz1wxw28i5deh25tt",
         "has_note": false,
         "has_url": true,
-        "has_diagrams": false,
-        "has_files": true,
-        "has_content": false
+        "has_files": false,
+        "has_mockups": false,
+        "has_content": { "en_US": false },
     },
     {
         "color": "#cc2e2e",
@@ -136,9 +140,9 @@ See the description of a single page details on the (page endpoint)[./page.md].
         "id": "svgvcqzzz9gpzegqypa",
         "has_note": true,
         "has_url": false,
-        "has_diagrams": true,
         "has_files": false,
-        "has_content": true
+        "has_mockups": false,
+        "has_content": { "en_US": true },
     }
 ]
 ```

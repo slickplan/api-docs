@@ -9,7 +9,7 @@
 ``` json
 [
     {
-        "id": 1407165182,
+        "id": "kf9ptj",
         "name": "Sample Palette",
         "colors": [
             {
@@ -24,7 +24,6 @@
             },
             {
                 "level": "home",
-                "background": null,
                 "text": "#e6d62b"
             },
             {

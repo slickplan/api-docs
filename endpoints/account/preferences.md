@@ -8,27 +8,39 @@
 ### Response
 ``` json
 {
-    "new_comment_nofity": true,
-    "email_invoices": false,
-    "us_date_formatting": false,
+    "us_date_formatting": true,
     "sitemap_label_regular_case": true,
-    "cells_numbering": false,
-    "show_company_header": true
+    "cells_numbering": true,
+    "show_company_header": true,
+    "sitemap_cell_default_font_size": "16px",
+    "sitemap_cell_default_box_size": "small",
+    "always_show_support_chat": false,
+    "new_comment_nofity": false,
+    "email_notify_content_assigned": true,
+    "email_notify_content_unassigned": true,
+    "email_notify_content_due_date_updated": false,
+    "email_notify_content_status_updated": true,
+    "email_invoices": false
 }
 ```
 
 Key | Description
 --- | ---
-new_comment_nofity | Email notification of new comments
-email_invoices | Send invoices via email
 us_date_formatting | US date formatting (m/d/y)
 sitemap_label_regular_case | Use regular case text on cells
-cells_numbering | Automatically number cells
+cells_numbering | Automatically number cells in sitemaps
 show_company_header | Show company header on shared sitemaps
+sitemap_cell_default_font_size | Default sitemap cell font size, one of: `12px`, `14px`, `16px`
+sitemap_cell_default_box_size | Default sitemap cell box size, one of: `small`, `medium`, `large`
+always_show_support_chat | `true` to show Slickplan Support chat icon on the lower-right side of the page, `false` otherwise
+new_comment_nofity | Email notification of new comments
+email_notify_content_assigned | Email notification of content assignement
+email_notify_content_unassigned | Email notification of content unassigned
+email_notify_content_due_date_updated | Email notification after content due date update
+email_notify_content_status_updated | Email notification of content status update
+email_invoices | Send invoices via email
 
 Possible other [responses](./../../sections/responses.md): `403`.
-
-**Note**: Please note a typo in `new_comment_nofity` setting, it should be `notification`, not `nofity` - we are sorry for that. Unfortunatelly it’s too late now to fix this 😢
 
 ## Update setting
 
@@ -47,6 +59,6 @@ Will update the account preferences from the parameters passed and return the JS
     "us_date_formatting": false,
     "sitemap_label_regular_case": true,
     "cells_numbering": true,
-    "show_company_header": true
+    "sitemap_cell_default_font_size": "12px"
 }
 ```

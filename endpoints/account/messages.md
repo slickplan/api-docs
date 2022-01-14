@@ -8,14 +8,13 @@
 ### Response
 ``` json
 {
-    "new_comment": "A new comment has been added to sitemap %sitemap% by %first_name% %last_name%:\r\n\r\n__%comment%__\r\n\u2014 **%first_name% %last_name%**\r\n\r\n[View this sitemap](%url%)",
-    "user_invitation": "Hi %first_name%,\r\n\r\nYou have been invited to the %company_name%’s Slickplan account. Please [login here](%url%).\r\n\r\nYour Username: %username%\r\nYour Password: %password%\r\n\r\nAfter logging in for the first time you can change your login details.\r\n\r\nThanks, %owner_name%",
-    "user_invitation_role": "Hi %first_name%,\r\n\r\nYou have been invited to %role% the sitemap %sitemap%. Please [login here](%url%).\r\n\r\nThanks, %owner_name%",
-    "user_invitation_permission": "Hi %first_name%,\r\n\r\nYou have been given %permission% permissions to the sitemap %sitemap%. Please [login here](%url%).\r\n\r\nThanks, %owner_name%",
-    "user_invitation_role_permission": "Hi %first_name%,\r\n\r\nYou have been invited to %role% the sitemap %sitemap%. You have also been given %permission% permissions. Please [login here](%url%).\r\n\r\nThanks, %owner_name%",
-    "approved_sitemap": "Hi %first_name%,\r\n\r\nThe sitemap %sitemap% has been approved by %user%.\r\n\r\nPlease [login here](%url%).",
-    "request_unlock": "Hi %first_name%,\r\n\r\nA(n) %role% on your team, %user%, is requesting that the sitemap %sitemap% be unlocked.\r\n\r\nThis may affect the sitemap’s approval status.\r\n\r\nPlease [login here](%url%).",
-    "sitemap_unlocked": "Hi %first_name%,\r\n\r\nThe sitemap %sitemap% you approved has be unlocked by %user%.\r\n\r\nThis has affected %sitemap% sitemap’s approval status.\r\n\r\nPlease consult your team as the sitemap will need to be a approved again.\r\n\r\nPlease [login here](%url%)."
+    "user_invitation": "Hi %first_name%,\n\nYou have been invited to the %company_name%'s Slickplan account. Please [click here](%url%) to accept the invitation and set up your password.\n\nYour Username\/Email: %email%\n\nThanks, %sender_name%",
+    "user_invitation_role": "Hi %first_name%,\n\nYou have been invited to edit the project %project_name%. Please [login here](%url%).\n\nThanks, %sender_name%",
+    "user_invitation_role_permission": "Hi %first_name%,\n\nYou have been invited to edit the project %project_name%. You have also been given %permissions% permissions. Please [login here](%url%).\n\nThanks, %sender_name%",
+    "new_comment": "Hi %first_name%,\n\nA new comment has been added to project %project_name% by %author_name%:\n\n__%comment%__\n\n[View this project](%url%)",
+    "approved_sitemap": "Hi %first_name%,\n\nThe project %project_name% has been approved by %user%. Please [login here](%url%).\n\nThanks, %sender_name%",
+    "sitemap_locked": "Hi %first_name%,\n\nThe project %project_name% has been locked by %user%. Please [login here](%url%).\n\nThanks, %sender_name%",
+    "sitemap_unlocked": "Hi %first_name%,\n\nThe project %project_name% has been unlocked by %user%. Please [login here](%url%).\n\nThanks, %sender_name%"
 }
 ```
 
@@ -23,13 +22,12 @@ Possible other [responses](./../../sections/responses.md): `403`.
 
 Key | Type | Description
 --- | --- | ---
-new_comment | string | New comment notification
 user_invitation | string | New user invitation with username and password
 user_invitation_role | string | User invitation, with sitemap link and sitemap role
-user_invitation_permission | string | User invitation, with sitemap link and extra permissions info
 user_invitation_role_permission | string | User invitation, with sitemap link, sitemap role and extra permissions info
+new_comment | string | New comment notification
 approved_sitemap | string | Sitemap approval notification
-request_unlock | string | Request to unlock a sitemap
+sitemap_locked | string | Sitemap unlocked notification
 sitemap_unlocked | string | Sitemap unlocked notification
 
 ## Get single message
@@ -54,6 +52,6 @@ Possible other [responses](./../../sections/responses.md): `403` and `404`.
 You can use simple markdown syntax to format message, allowed tags:
 * `**text**` - bold text
 * `__text__` - italic text
-* `[text](http://example.com)` or `<a href="http://example.com">text</a>` - link
+* `[text](https://example.com)` or `<a href="https://example.com">text</a>` - link
 
 Will update the message from the content passed and return the JSON representation of the message. You can pass an empty string to reset the message to default value. Possible other [responses](./../../sections/responses.md): `400`, `403` and `404`.

@@ -19,6 +19,7 @@
         "can_edit": true,
         "can_approve": true,
         "can_lock": true,
+        "can_manage": true,
         "contributors": [
             {
                 "user_id": 4,
@@ -26,14 +27,14 @@
             },
             {
                 "user_id": 8,
-                "role": "viewer"
+                "role": "editor"
             }
         ],
         "versions": [
             {
                 "id": 3,
                 "version": "1.0",
-                "uri_alias": "abcxyz",
+                "uri_alias": "abcdxyz",
                 "date_created": "2014-07-17T04:47:44+00:00",
                 "date_modified": "2014-08-04T10:55:06+00:00"
             }
@@ -47,9 +48,10 @@
         "is_approved": false,
         "is_locked": false,
         "can_view": true,
-        "can_edit": false,
+        "can_edit": true,
         "can_approve": false,
         "can_lock": false,
+        "can_manage": false,
         "contributors": [],
         "versions": [
             {
@@ -81,6 +83,11 @@ title | string | Sitemap title
 is_archived | boolean | `true` if sitemap is archived, `false` if it is active
 is_approved | boolean | `true` if sitemap is approved, `false` if it is active
 is_locked | boolean | `true` if sitemap is locked, `false` if it is unlocked
+can_view | boolean | *Deprecated*, always `true` for backwards compatibility
+can_edit | boolean | *Deprecated*, always `true` for backwards compatibility
+can_approve | boolean | `true` if current user can approve specified project, `false` if otherwise
+can_lock | boolean | `true` if current user can lock specified project, `false` if otherwise
+can_manage | boolean | `true` if current user can manage specified project, `false` if otherwise
 contributors | string | Array of sitemap’s contributors
 versions | string | Array of sitemap’s versions
 
@@ -88,7 +95,7 @@ versions | string | Array of sitemap’s versions
 Key | Type | Description
 --- | --- | ---
 user_id | integer | Unique identifier of the user who created the sitemap
-role | string | `editor` or `viewer`
+role | string | *Deprecated*, always `editor` for backwards compatibility
 
 #### Sitemap versions array
 Key | Type | Description
@@ -121,6 +128,7 @@ date_modified | string | Last modification date in Atom format
     "can_edit": true,
     "can_approve": true,
     "can_lock": true,
+    "can_manage": true,
     "contributors": [
         {
             "user_id": 4,
@@ -128,7 +136,7 @@ date_modified | string | Last modification date in Atom format
         },
         {
             "user_id": 8,
-            "role": "viewer"
+            "role": "editor"
         }
     ],
     "versions": [
@@ -164,14 +172,13 @@ Possible other [responses](./../sections/responses.md): `403` and `404`.
     "version": "1.0",
     "contributors": [
         {
-            "user_id": 4,
-            "role": "viewer"
+            "user_id": 4
         }
     ]
 }
 ```
 
-This will return `201 Created` with the current JSON representation of the sitemap if the creation was successful. Possible other [responses](./../sections/responses.md): `400` and `403`.
+This will return `201 Created` with the current JSON representation of the sitemap if the creation was successful. Current user will always be added as a contributor with `manage` permission. Possible other [responses](./../sections/responses.md): `400` and `403`.
 
 ## Update a sitemap
 
@@ -186,8 +193,7 @@ Will update the sitemap from the parameters passed and return the JSON represent
     "title": "New sitemap name",
     "contributors": [
         {
-            "user_id": 4,
-            "role": "viewer"
+            "user_id": 4
         }
     ]
 }

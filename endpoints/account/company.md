@@ -26,7 +26,7 @@ company_name_2 | string | Company name, second line
 subdomain | string | Account’s subdomain (`<subdomain>`.slickplan.com)
 site_color | string | Account branding color in HEX format or `false` if no account branding is available for current user’s plan
 use_dark_font | string | Account branding font color - `true` for dark gray, `false` for white
-billing_address | string | Billing address for invoices
+billing_address | string | Billing address for invoices (available only if a user has „Allow changing payment settings” permission) 
 
 ## Update setting
 

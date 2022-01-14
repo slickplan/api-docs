@@ -68,6 +68,27 @@ You can perform up to 25 requests per 10 second period on an account with one OA
 
 ## Changes
 
+**2022-01-14**
+* Added additional data to diagrams lists (`GET /v1/diagrams` and `GET /v1/sitemaps/<sitemap_id>/diagrams`):
+  * `is_locked`
+* Added additional data to diagram details (`GET /v1/diagrams/<diagram_id>` and `GET /v1/sitemaps/<sitemap_id>/diagrams/<diagram_id>`):
+  * `items_data`
+  * `elements.*.order`
+* Added additional data to sitemap details (`GET /v1/sitemaps` and `GET /v1/sitemaps/<sitemap_id>`):
+  * `can_manage`
+  * Deprecation notice: `can_view`, `can_edit`, `contributors.*.role`
+* Added additional account preferences (`GET /v1/account/preferences`)
+* Added additional data to sitemap page files list (`GET /v1/sitemaps/<sitemap_id>/page/<page_id>/files`):
+  * `file_type`
+* Updated `color_scheme` format in sitemap options (`GET /v1/sitemaps/<sitemap_id>/options`)
+* Updated sitemap structure data (`GET /v1/sitemaps/<sitemap_id>/structure` and `GET /v1/sitemaps/<sitemap_id>/page/<page_id>`):
+  * updated `has_content`, it's now an object and it includes information about each language
+  * updated `has_files`, it's now an array of files ids
+  * added `has_mockups` - an array of files ids
+  * renamed `has_diagrams` to `diagrams`, it's now an array of diagrams ids,
+* Removed `user_invitation_permission` and `request_unlock` message templates (`GET /v1/account/messages`)
+* Removed `design` and `text_shadow` sitemap options (`GET /v1/sitemaps/<sitemap_id>/options`)
+
 **2020-02-25**
 * Updated `GET /v1/sitemaps/<sitemap_id>/page/<page_id>/content` - added missing metadata to response, and `filename` to returned file details
 

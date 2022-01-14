@@ -12,7 +12,7 @@ See how to get a sitemap's pages list on the [structure endpoint](./structure.md
 {
     "id": "svgz1wxw28i5deh25tt",
     "level": 1,
-    "text": "Level 1",
+    "text": "Level 1 page",
     "order": 1000,
     "color": "#57aa34",
     "archetype": "exrrliyswugymjz",
@@ -28,9 +28,10 @@ See how to get a sitemap's pages list on the [structure endpoint](./structure.md
         }
     ],
     "section": "svgnq3nac4e1dzr8z0l",
-    "has_diagrams": false,
+    "diagrams": false,
     "has_files": false,
-    "has_content": false
+    "has_mockups": false,
+    "has_content": { "en_US": true, "pl_PL": false }
 }
 ```
 
@@ -49,9 +50,10 @@ parent | string | Parent page ID
 desc | string | Page note
 url | array | Array of page's links
 section | string | Page's subsection ID
-has_diagrams | boolean | `true` if page has diagrams
-has_files | boolean | `true` if page has design mockups
-has_content | boolean | `true` if page has content
+diagrams | array/boolean | Array of diagrams ids or `false` if page has no diagrams
+has_files | array/boolean | Array of files ids or `false` if page has no files attached
+has_mockups | array/boolean | Array of files ids or `false` if page has no mockups attached
+has_content | object/boolean | Object or `false` if page has no contents
 
 ## Get a single page diagrams list
 
@@ -80,7 +82,8 @@ Possible other [responses](./../../sections/responses.md): `403` and `404`.
         "filename": "IMG_9785.jpg",
         "filesize": 338531,
         "type": "image",
-        "url": "https:\/\/example.slickplan.com\/file\/get/(...)"
+        "url": "https:\/\/example.slickplan.com\/file\/get/(...)",
+        "file_type": "mockup"
     },
     {
         "id": "ihiIk4ntz3iDDw89hDh04CfOHPdwuXsW",
@@ -88,7 +91,8 @@ Possible other [responses](./../../sections/responses.md): `403` and `404`.
         "filename": "Video_9786.mov",
         "filesize": 128716,
         "type": "video",
-        "url": "https:\/\/example.slickplan.com\/file\/get/(...)"
+        "url": "https:\/\/example.slickplan.com\/file\/get/(...)",
+        "file_type": "file"
     }
 ]
 ```
@@ -103,6 +107,7 @@ filename | string | Original file name
 filesize | integer | File size in bytes
 type | string | File type, one of: `image`, `video`, `file`
 url | string | An URL to download file from, the link expires after 24 hours
+file_type | string | One of: `file`, `mockup`
 
 ## Get a single page content
 
@@ -120,7 +125,7 @@ or
     "meta_keywords": "sample, keywords",
     "template": "",
     "status": "draft",
-    "assignee": 82929,
+    "assignee": [82929],
     "language": "en_US",
     "body": [
         {

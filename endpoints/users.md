@@ -61,7 +61,7 @@ last_login | string | Last login date in Atom format
 created | string | User creation date in Atom format
 is_active | boolean | `true` if user is active, `false` otherwise
 user_type | string | User type, check the table in [Me endpoint](./me.md#user-types)
-extra_privileges | array | Administrator extra permissions - `view_invoices` is self-explanatory, `payment` - user can manage payment settings
+extra_privileges | array | Extra permissions: `view_invoices`, `payment`, and contributor-only: `create_sitemaps`, `full_file_library`.
 
 ## Get the specified user
 

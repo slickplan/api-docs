@@ -12,22 +12,31 @@
 {
     "svgmainsection": {
         "template": "horizontal",
-        "design": "gradient",
-        "color_scheme": "default",
-        "text_shadow": true,
-        "id": "svgmainsection"
+        "color_scheme": "default"
     },
     "svgtvberlfm9etj2iqp": {
-        "template": "horizontal",
-        "design": "gradient",
+        "template": "tree",
+        "default_color": "#fdfdfe",
+        "lines_color": "#dbdbdd",
+        "text_color": "#404040",
         "color_scheme": {
-            "default": "#abcdef",
-            "home": "#aabbcc",
-            "level1": "#bbccdd",
-            "level2": "#123abc"
-        },
-        "text_shadow": true,
-        "id": "svgtvberlfm9etj2iqp"
+            "home": {
+                "text": null,
+                "background": "#aabbcc"
+            },
+            "level1": {
+                "text": "#000000",
+                "background": "#bbccdd"
+            },
+            "level2": {
+                "text": "#000000",
+                "background": "#123abc"
+            },
+            "archetype-kxoajsij": {
+                "text": "#ff0000",
+                "background": null
+            }
+        }
     }
 }
 ```
@@ -37,21 +46,22 @@ Possible other [responses](./../../sections/responses.md): `403` and `404`.
 Key | Type | Description
 --- | --- | ---
 id | string | Sitemap section ID
-template | string | Sitemap orientation: `horizontal` or `vertical`
-design | string | Sitemap pages design type: `gradient` or `flat`
+template | string | Sitemap orientation: `horizontal`, `vertical` or `tree`
 color_scheme | string/array | Sitemap color scheme: `default` or an array of colors
-text_shadow | boolean | `true` if there should be a text shadow on pages
+default_color | string | Default cell box color
+text_color | string | Default cell text color
+lines_color | string | Default sitemap connection lines color
+design | string | *Removed*
+text_shadow | boolean | *Removed*
 
 #### `color_scheme` Array
 Key | Description
 --- | ---
-default | Default page color
 home | Home page color
 util | Utility page color
 foot | Footer page color
-lines | Connection lines color
-text | Text color
 levelN | Specified level’s page color where `N` is an integer
+archetype-X | Specified color for pages with assigned `X` archetype
 
 ## Get the specified section options
 
@@ -62,15 +72,7 @@ levelN | Specified level’s page color where `N` is an integer
 ``` json
 {
     "template": "horizontal",
-    "design": "gradient",
-    "color_scheme": {
-        "default": "#abcdef",
-        "home": "#aabbcc",
-        "level1": "#bbccdd",
-        "level2": "#123abc"
-    },
-    "text_shadow": true,
-    "id": "svgtvberlfm9etj2iqp"
+    "color_scheme": "default"
 }
 ```
 
@@ -87,12 +89,6 @@ Will update the sitemap options from the parameters passed and return the JSON r
 ``` json
 {
     "template": "vertical",
-    "design": "flat",
-    "color_scheme": {
-        "default": "#aabbcc",
-        "home": "#555",
-        "lines": "#000000"
-    },
-    "text_shadow": false
+    "color_scheme": "default"
 }
 ```
