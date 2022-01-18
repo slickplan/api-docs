@@ -11,10 +11,6 @@
     {
         "id": 2,
         "user_id": 5,
-        "username": "elton",
-        "first_name": "Elton",
-        "last_name": "John",
-        "email": "elton@example.com",
         "comment": "New <a href=\"http:\/\/example.com\">comment<\/a>",
         "date": "2014-08-02T11:52:23+00:00",
         "parent_id": 0,
@@ -24,13 +20,40 @@
     {
         "id": 3,
         "user_id": 6,
-        "username": "tracy",
-        "first_name": "Tracy",
-        "last_name": "Chapman",
-        "email": "tracy@example.com",
         "comment": "Yes, I agree!",
         "date": "2014-08-04T13:25:47+00:00",
         "parent_id": 2
+    },
+    {
+        "id": 212,
+        "user_id": 1,
+        "comment": "test",
+        "date": "2022-01-14T14:32:47+00:00",
+        "type": "page",
+        "cell_id": "svgolwjdqghoxfqku9p"
+    },
+    {
+        "id": 213,
+        "user_id": 1,
+        "comment": "Content Planner comment",
+        "date": "2022-01-18T16:14:40+00:00",
+        "type": "content",
+        "language": "en_US",
+        "cell_id": "svgyz6lapiz15hslp41",
+        "block_id": "g6qzugdiq"
+    },
+    {
+        "id": 214,
+        "user_id": 0,
+        "comment": "Comment about mockup",
+        "date": "2022-01-18T16:15:27+00:00",
+        "type": "file",
+        "file_id": "YfGKuaQZleDDuzcCj7Q79hhtuYcfp4xe",
+        "cell_id": "svgk74ni0cfenp533zh",
+        "guest": {
+            "name": "John",
+            "email": "john@example.com"
+        }
     }
 ]
 ```
@@ -40,16 +63,16 @@ Possible other [responses](./../sections/responses.md): `403` and `404`.
 Key | Type | Description
 --- | --- | ---
 id | integer | Unique identifier of the comment
-user_id | integer | Unique identifier of the user
-username | string | Username of the user
-first_name | string | First name of the user
-last_name | string | Last name of the user
-email | string | Email address of the user
-comment | string | Comment’s content
+user_id | integer | Unique identifier of the user, `0` if comment was added by a guest
+guest | object | Only present if comment was added by a guest (not registered user), also `user_id` is `0`
+comment | string | Comment body
 date | string | Comment creation date in Atom format
 parent_id | integer | Unique identifier of the parent comment (so this comment is a reply). Set the `hierarchical` parameter to get parent-child response format
-file_id | string | Design Mockup file ID
-page_id | string | Only if `file_id` is set; sitemap’s page ID where the Design Mockup was uploaded
+type | string | One of: `page`, `file`, `content` or empty if that comment was added globally to a project
+cell_id | string | Sitemap's page ID, only present if `type` is set and one of: `page`, `file`, `content`
+file_id | string | Design Mockup file ID, only present if `type` is `file`
+block_id | string | Content block ID, only present if `type` is `content` and also if `page_id` is present
+language | string | Only present if `type` is `content`, determines to which language the comment has been added
 
 ## Get all comments (hierarchical)
 
@@ -62,22 +85,12 @@ page_id | string | Only if `file_id` is set; sitemap’s page ID where the Desig
     {
         "id": 2,
         "user_id": 5,
-        "username": "elton",
-        "first_name": "Elton",
-        "last_name": "John",
-        "email": "elton@example.com",
         "comment": "New <a href=\"http:\/\/example.com\">comment<\/a>",
         "date": "2014-08-02T11:52:23+00:00",
-        "file_id": "f3fsGeB9W7UooVSuXsWk4ntz3iDh04Cf",
-        "page_id": "svgdyt34vfijwcrlgoc",
         "replies": [
             {
                 "id": 3,
                 "user_id": 6,
-                "username": "tracy",
-                "first_name": "Tracy",
-                "last_name": "Chapman",
-                "email": "tracy@example.com",
                 "comment": "Yes, I agree!",
                 "date": "2014-08-04T13:25:47+00:00"
             }
@@ -98,10 +111,6 @@ Possible other [responses](./../sections/responses.md): `403` and `404`.
 {
     "id": 2,
     "user_id": 5,
-    "username": "elton",
-    "first_name": "Elton",
-    "last_name": "John",
-    "email": "elton@example.com",
     "comment": "New <a href=\"http:\/\/example.com\">comment<\/a>",
     "date": "2014-08-02T11:52:23+00:00",
     "parent_id": 0,

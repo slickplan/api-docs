@@ -64,6 +64,45 @@ pages | array | Pages IDs where template is assigned
 body | array | Content body, please see `body` element in [`GET /v1/sitemaps/<sitemap_id>/page/<page_id>/content` endpoint](./page.md#get-a-single-page-content) for details
 metadatas | array | SEO meta datas: `title`, `description`, `keywords`
 
+## Get a list of workflow statuses
+
+* `GET /v1/sitemaps/<sitemap_id>/content/workflow`
+* Required scope: `sitemaps_content_read` or `sitemaps_content_write`
+
+### Response
+``` json
+[
+    {
+        "id": "complete",
+        "name": "Complete",
+        "color": "#59bc6d",
+        "readonly": true,
+        "description": "Completed pages"
+    },
+    {
+        "id": "draft",
+        "name": "Draft",
+        "color": "#f5a623",
+        "readonly": false
+    },
+    {
+        "id": "~",
+        "name": "Unassigned",
+        "color": "#e2e6f0"
+    }
+]
+```
+
+Possible other [responses](./../../sections/responses.md): `403`.
+
+Key | Type | Description
+--- | --- | ---
+id | string | Unique status ID
+name | string | Status name
+color | string | Assigned status color in hex format
+readonly | boolean | `true` if status makes pages read-only, optional
+description | string | Optional status short description
+
 ## Get site settings
 
 * `GET /v1/sitemaps/<sitemap_id>/site/settings`
