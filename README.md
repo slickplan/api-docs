@@ -2,6 +2,8 @@
 
 This is a REST-style API that uses JSON for serialization and OAuth 2 for authentication.
 
+__We provide Slickplan OAuth 2.0 support for the PHP League's OAuth 2.0 Client. Please see our [slickplan/oauth2-slickplan-php](https://github.com/slickplan/oauth2-slickplan-php) package.__
+
 ## Making Requests
 
 ### The Base URL
