@@ -3,7 +3,6 @@
 ## Get list of sitemaps
 
 * `GET /v1/sitemaps`
-* Required scope: `sitemaps_read` or `sitemaps_write`
 
 ### Response
 ``` json
@@ -109,7 +108,6 @@ date_modified | string | Last modification date in Atom format
 ## Get the specified sitemap
 
 * `GET /v1/sitemaps/3`
-* Required scope: `sitemaps_read` or `sitemaps_write`
 
 ### Response
 ``` json
@@ -163,7 +161,7 @@ Possible other [responses](./../sections/responses.md): `403` and `404`.
 ## Create a new sitemap
 
 * `POST /v1/sitemaps`
-* Required scope: `sitemaps_write`
+* Requires "write" scope
 
 ### Request
 ``` json
@@ -183,7 +181,7 @@ This will return `201 Created` with the current JSON representation of the sitem
 ## Update a sitemap
 
 * `PUT /v1/sitemaps/3`
-* Required scope: `sitemaps_write`
+* Requires "write" scope
 
 Will update the sitemap from the parameters passed and return the JSON representation of the updated sitemap. Possible other [responses](./../sections/responses.md): `400`, `403` and `404`.
 
@@ -202,6 +200,6 @@ Will update the sitemap from the parameters passed and return the JSON represent
 ## Delete a sitemap
 
 * `DELETE /v1/sitemaps/3`
-* Required scope: `sitemaps_write`
+* Requires "write" scope
 
 Will delete the specified sitemap and return `204 No Content` if that was successful. Possible other [responses](./../sections/responses.md): `403` and `404`.

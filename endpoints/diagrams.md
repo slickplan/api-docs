@@ -3,7 +3,6 @@
 ## Get list of diagrams
 
 * `GET /v1/diagrams`
-* Required scope: `diagrams_read` or `diagrams_write`
 
 ### Response
 ``` json
@@ -57,7 +56,6 @@ is_locked | boolean | `true` if sitemap is locked, `false` if it is unlocked
 ## Get a single diagram
 
 * `GET /v1/diagrams/<id>`
-* Required scope: `diagrams_read` or `diagrams_write`
 
 ### Response
 ``` json
@@ -169,7 +167,7 @@ items_data | object | List of additional data for elements and connectors
 ## Create a new diagram
 
 * `POST /v1/diagrams`
-* Required scope: `diagrams_write`
+* Requires "write" scope
 
 ### Request
 ``` json
@@ -188,7 +186,7 @@ cell_id | string | Unique identifier of a page in sitemap, that the diagram shou
 ## Update a diagram
 
 * `PUT /v1/diagrams/bannarepfupfrmm9`
-* Required scope: `diagrams_write`
+* Requires "write" scope
 
 Will update the diagram from the parameters passed and return the JSON representation of the updated diagram. Possible other [responses](./../sections/responses.md): `400`, `403` and `404`.
 
@@ -202,6 +200,6 @@ Will update the diagram from the parameters passed and return the JSON represent
 ## Delete a diagram
 
 * `DELETE /v1/diagrams/bannarepfupfrmm9`
-* Required scope: `diagrams_write`
+* Requires "write" scope
 
 Will delete the specified diagram and return `204 No Content` if that was successful. Possible other [responses](./../sections/responses.md): `403` and `404`.

@@ -1,5 +1,9 @@
 # Slickplan API change log
 
+**2023-04-26**
+* Simplified [scopes](./sections/scopes.md)
+* Access/refresh tokens expiry times extended.
+
 **2022-01-18**
 * Added new endpoints:
   * [Content workflow statuses](./endpoints/sitemaps/content.md#get-a-list-of-workflow-statuses): `GET /v1/sitemaps/<sitemap_id>/content/workflow`

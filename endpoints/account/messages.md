@@ -3,7 +3,6 @@
 ## Get all messages
 
 * `GET /v1/account/messages`
-* Required scope: `email_messages_read` or `email_messages_write`
 
 ### Response
 ``` json
@@ -33,7 +32,6 @@ sitemap_unlocked | string | Sitemap unlocked notification
 ## Get single message
 
 * `GET /v1/account/messages/<key>` (ex. `GET /v1/account/messages/new_comment`)
-* Required scope: `email_messages_read` or `email_messages_write`
 
 ### Response
 ``` json
@@ -47,7 +45,7 @@ Possible other [responses](./../../sections/responses.md): `403` and `404`.
 ## Update message
 
 * `PUT /v1/account/messages/<key>` (ex. `PUT /v1/account/messages/new_comment`)
-* Required scope: `email_messages_write`
+* Requires "write" scope
 
 You can use simple markdown syntax to format message, allowed tags:
 * `**text**` - bold text

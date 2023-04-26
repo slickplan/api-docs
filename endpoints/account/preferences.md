@@ -3,7 +3,6 @@
 ## Get all account preferences
 
 * `GET /v1/account/preferences`
-* Required scope: `account_preferences_read` or `account_preferences_write`
 
 ### Response
 ``` json
@@ -45,7 +44,7 @@ Possible other [responses](./../../sections/responses.md): `403`.
 ## Update setting
 
 * `PUT /v1/account/preferences`
-* Required scope: `account_preferences_write`
+* Requires "write" scope
 
 Will update the account preferences from the parameters passed and return the JSON representation of current settings. Possible other [responses](./../../sections/responses.md): `403`.
 

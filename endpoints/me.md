@@ -3,7 +3,6 @@
 Use this endpoint to get information about the currently authenticated user.
 
 * `GET /v1/me`
-* Required scope: `user_read` (default)
 
 ### Response
 ``` json
@@ -40,7 +39,7 @@ is_active | boolean | `true` if account is active, `false` if [suspended](https:
 ## Update current user data
 
 * `PUT /v1/me`
-* Required scope: `user_write`
+* Requires "write" scope
 
 Will update the currently authenticated user information from the parameters passed and return the JSON representation of the changed settings. Possible other [responses](./../sections/responses.md): `400` and `403`.
 

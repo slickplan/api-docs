@@ -3,7 +3,6 @@
 ## Get all comments
 
 * `GET /v1/comments/<sitemap_id>`
-* Required scope: `sitemaps_comments_read` or `sitemaps_comments_write`
 
 ### Response
 ``` json
@@ -77,7 +76,6 @@ language | string | Only present if `type` is `content`, determines to which lan
 ## Get all comments (hierarchical)
 
 * `GET /v1/comments/<sitemap_id>?hierarchical=1`
-* Required scope: `sitemaps_comments_read` or `sitemaps_comments_write`
 
 ### Response
 ``` json
@@ -104,7 +102,6 @@ Possible other [responses](./../sections/responses.md): `403` and `404`.
 ## Get single comment
 
 * `GET /v1/comments/<sitemap_id>/2`
-* Required scope: `sitemaps_comments_read` or `sitemaps_comments_write`
 
 ### Response
 ``` json
@@ -124,7 +121,7 @@ Possible other [responses](./../sections/responses.md): `403` and `404`.
 ## Create new comment
 
 * `POST /v1/comments/<sitemap_id>`
-* Required scope: `sitemaps_comments_write`
+* Requires "write" scope
 
 Will create a new comment from the parameters passed and return the JSON representation of the created comment. Possible other [responses](./../sections/responses.md): `400`, `403` and `404`.
 
@@ -139,7 +136,7 @@ Will create a new comment from the parameters passed and return the JSON represe
 ## Update a comment
 
 * `PUT /v1/comments/<sitemap_id>/<comment_id>`
-* Required scope: `sitemaps_comments_write`
+* Requires "write" scope
 
 Will update the comment from the parameters passed and return the JSON representation of the updated comment. Possible other [responses](./../sections/responses.md): `400`, `403` and `404`.
 
@@ -153,6 +150,6 @@ Will update the comment from the parameters passed and return the JSON represent
 ## Delete comment
 
 * `DELETE /v1/comments/<sitemap_id>/2`
-* Required scope: `sitemaps_color_comments_write`
+* Requires "write" scope
 
 Will delete the specified comment and return `204 No Content` if that was successful. Possible other [responses](./../sections/responses.md): `403` and `404`.

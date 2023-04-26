@@ -19,7 +19,7 @@ We offer OAuth2 as the standard way to authenticate with our API as this offers 
     client_id | string | **Required.** The client ID you received from Slickplan when you registered
     redirect_uri | string | **Required.** The URL in your app where users will be sent after authorization
     state | string | **Required.** This is an unguessable random string, equivalent of a `CSRF` token, and provides session validation for your authorize request. See the [OAuth2.0 Spec](https://tools.ietf.org/html/rfc6749#section-4.1.1) for more information
-    scope | string | A space separated list of [scopes](./scopes.md). If not provided, scope defaults to `user_read`
+    scope | string | A space separated list of [scopes](./scopes.md). If not provided, scope defaults to `all_read`
     
     If the user accepts your request, Slickplan redirects back to your site with a temporary code in a `code` parameter as well as the state you provided in the previous step in a `state` parameter. If the states don’t match, the request has been created by a third party and the process should be aborted.
 
@@ -41,7 +41,6 @@ We offer OAuth2 as the standard way to authenticate with our API as this offers 
         "access_token": "742075952535e1ae2f616z189c1828fac2a2a555",
         "expires_in": 604800,
         "token_type": "Bearer",
-        "scope": "user_read contributors_read",
         "refresh_token": "f31ee59fc5ez8443015cff37f572f8ec39dca7da"
     }
     ```
@@ -50,4 +49,4 @@ We offer OAuth2 as the standard way to authenticate with our API as this offers 
 
     `GET https://slickplan.com/api/v1/me?access_token=...`
     
-    Access token expires after 7 days and need to be refreshed. When authenticating, a refresh token and expiration timestamp is provided. Use the refresh token to retrieve a new access token. Most OAuth2 client libraries will handle this automatically.
+    Access token expires after 60 days and need to be refreshed. Refresh token expires after 180 days. When authenticating, a refresh token and expiration timestamp is provided. Use the refresh token to retrieve a new access token. Most OAuth2 client libraries will handle this automatically.

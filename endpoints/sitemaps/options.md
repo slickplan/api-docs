@@ -5,7 +5,6 @@
 ## Get the sitemap options
 
 * `GET /v1/sitemaps/<sitemap_id>/options`
-* Required scope: `sitemaps_read` or `sitemaps_write`
 
 ### Response
 ``` json
@@ -66,7 +65,6 @@ archetype-X | Specified color for pages with assigned `X` archetype
 ## Get the specified section options
 
 * `GET /v1/sitemaps/<sitemap_id>/options/<section_id>`
-* Required scope: `sitemaps_read` or `sitemaps_write`
 
 ### Response
 ``` json
@@ -81,7 +79,7 @@ Possible other [responses](./../../sections/responses.md): `403` and `404`.
 ## Update section options
 
 * `PUT /v1/sitemaps/<sitemap_id>/options/<section_id>`
-* Required scope: `sitemaps_write`; `sitemaps_color_palettes_write` for `design`, `color_scheme` and `text_shadow` modification
+* Requires "write" scope
 
 Will update the sitemap options from the parameters passed and return the JSON representation of the updated sitemap. Possible other [responses](./../../sections/responses.md): `400`, `403` and `404`.
 

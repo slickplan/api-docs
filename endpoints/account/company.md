@@ -3,7 +3,6 @@
 ## Get all settings
 
 * `GET /v1/account/company`
-* Required scope: `company_settings_read` or `company_settings_write`
 
 ### Response
 ``` json
@@ -31,7 +30,7 @@ billing_address | string | Billing address for invoices (available only if a use
 ## Update setting
 
 * `PUT /v1/account/company`
-* Required scope: `company_settings_write`
+* Requires "write" scope
 
 Will update the company settings from the parameters passed and return the JSON representation of the current settings. Possible other [responses](./../../sections/responses.md): `400` and `403`.
 

@@ -3,7 +3,6 @@
 ## Get a list of sitemap content templates
 
 * `GET /v1/sitemaps/<sitemap_id>/content/templates`
-* Required scope: `sitemaps_content_read` or `sitemaps_content_write`
 
 ### Response
 ``` json
@@ -35,7 +34,6 @@ pages | array | Pages IDs where template is assigned
 ## Get a single content template details
 
 * `GET /v1/sitemaps/<sitemap_id>/content/templates/<template_id>`
-* Required scope: `sitemaps_content_read` or `sitemaps_content_write`
 
 ### Response
 ``` json
@@ -67,7 +65,6 @@ metadatas | array | SEO meta datas: `title`, `description`, `keywords`
 ## Get a list of workflow statuses
 
 * `GET /v1/sitemaps/<sitemap_id>/content/workflow`
-* Required scope: `sitemaps_content_read` or `sitemaps_content_write`
 
 ### Response
 ``` json
@@ -106,7 +103,6 @@ description | string | Optional status short description
 ## Get site settings
 
 * `GET /v1/sitemaps/<sitemap_id>/site/settings`
-* Required scope: `sitemaps_content_read` or `sitemaps_content_write`
 
 ### Response
 ``` json

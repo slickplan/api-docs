@@ -3,7 +3,6 @@
 ## Get all page types
 
 * `GET /v1/archetypes`
-* Required scope: `sitemaps_read` or `sitemaps_page_types_read` or `sitemaps_page_types_write`
 
 ### Response
 ``` json
@@ -47,7 +46,6 @@ description | string | Page type description in HTML format
 ## Get single page type
 
 * `GET /v1/archetypes/<id>` (ex. `GET /v1/archetypes/_external`)
-* Required scope: `sitemaps_read` or `sitemaps_page_types_read` or `sitemaps_page_types_write`
 
 ### Response
 ``` json
@@ -64,7 +62,7 @@ Possible other [responses](./../sections/responses.md): `403` and `404`.
 ## Create new page type
 
 * `POST /v1/archetypes`
-* Required scope: `sitemaps_page_types_write`
+* Requires "write" scope
 
 Will create a new custom page type from the parameters passed and return the JSON representation of the created custom page type. Possible other [responses](./../sections/responses.md): `400`, `403`.
 
@@ -80,7 +78,7 @@ Will create a new custom page type from the parameters passed and return the JSO
 ## Update page type
 
 * `PUT /v1/archetypes/<id>` (ex. `PUT /v1/archetypes/nrjnfxutxwpitsv`)
-* Required scope: `sitemaps_page_types_write`
+* Requires "write" scope
 
 Will update the custom page type from the parameters passed and return the JSON representation of the custom page type. Possible other [responses](./../sections/responses.md): `400`, `403` and `404`.
 
@@ -96,6 +94,6 @@ Only custom page types can be edited, read-only page types IDs are prefixed with
 ## Delete page type
 
 * `DELETE /v1/archetypes/<id>`
-* Required scope: `sitemaps_page_types_write`
+* Requires "write" scope
 
 Will delete the specified page type and return `204 No Content` if that was successful. Possible other [responses](./../sections/responses.md): `403` and `404`.

@@ -5,7 +5,6 @@
 ## Get the sitemap structure
 
 * `GET /v1/sitemaps/<sitemap_id>/structure`
-* Required scope: `sitemaps_read` or `sitemaps_write`
 
 ### Response
 ``` json
@@ -87,7 +86,6 @@ See the description of a single page details on the (page endpoint)[./page.md].
 ## Get the specified section structure
 
 * `GET /v1/sitemaps/<sitemap_id>/structure/<section_id>`
-* Required scope: `sitemaps_read` or `sitemaps_write`
 
 ### Response
 ``` json

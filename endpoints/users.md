@@ -3,7 +3,6 @@
 ## Get list of account’s users
 
 * `GET /v1/users`
-* Required scope: `contributors_read` or `contributors_write`
 
 ### Response
 ``` json
@@ -66,7 +65,6 @@ extra_privileges | array | Extra permissions: `view_invoices`, `payment`, and co
 ## Get the specified user
 
 * `GET /v1/users/2`
-* Required scope: `contributors_read` or `contributors_write`
 
 ### Response
 ``` json
@@ -88,7 +86,7 @@ Possible other [responses](./../sections/responses.md): `403` and `404`.
 ## Create an user
 
 * `POST /v1/users`
-* Required scope: `contributors_write`
+* Requires "write" scope
 
 ### Request
 ``` json
@@ -107,13 +105,13 @@ This will return `201 Created` with the current JSON representation of the user 
 ## Update an user
 
 * `PUT /v1/users/2`
-* Required scope: `contributors_write`
+* Requires "write" scope
 
 Will update the user from the parameters passed and return the JSON representation of user’s properties. Possible other [responses](./../sections/responses.md): `400`, `403` and `404`.
 
 ## Delete an user
 
 * `DELETE /v1/users/2`
-* Required scope: `contributors_write`
+* Requires "write" scope
 
 Will delete the specified user and return `204 No Content` if that was successful. Possible other [responses](./../sections/responses.md): `403` and `404`.

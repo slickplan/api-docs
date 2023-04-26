@@ -3,7 +3,6 @@
 ## Get all custom color palettes
 
 * `GET /v1/palettes`
-* Required scope: `sitemaps_read` or `sitemaps_color_palettes_read` or `sitemaps_color_palettes_write`
 
 ### Response
 ``` json
@@ -68,7 +67,6 @@ colors | array | Array of colors in HEX format - min. 1, max. 16 items
 ## Get single color palette
 
 * `GET /v1/palettes/<id>` (ex. `GET /v1/palettes/ajkqosjh`)
-* Required scope: `sitemaps_read` or `sitemaps_color_palettes_read` or `sitemaps_color_palettes_write`
 
 ### Response
 ``` json
@@ -100,7 +98,7 @@ Possible other [responses](./../sections/responses.md): `403` and `404`.
 ## Create new color palette
 
 * `POST /v1/palettes`
-* Required scope: `sitemaps_color_palettes_write`
+* Requires "write" scope
 
 Will create a new color palette from the parameters passed, return `201 Created` and the JSON representation of the created palette (same format as `GET /v1/palettes/<id>`). Possible other [responses](./../sections/responses.md): `400` and `403`.
 
@@ -131,7 +129,7 @@ Will create a new color palette from the parameters passed, return `201 Created`
 ## Update color palette
 
 * `PUT /v1/palettes/<id>` (ex. `PUT /v1/palettes/ajkqosjh`)
-* Required scope: `sitemaps_color_palettes_write`
+* Requires "write" scope
 
 Will update the new color palette from the parameters passed and return the JSON representation of the updated palette. Possible other [responses](./../sections/responses.md): `400`, `403` and `404`.
 
@@ -162,6 +160,6 @@ Will update the new color palette from the parameters passed and return the JSON
 ## Delete color palette
 
 * `DELETE /v1/palettes/<id>` (ex. `PUT /v1/palettes/ajkqosjh`)
-* Required scope: `sitemaps_color_palettes_write`
+* Requires "write" scope
 
 Will delete the specified color palette and return `204 No Content` if that was successful. Possible other [responses](./../sections/responses.md): `403` and `404`.

@@ -5,7 +5,6 @@ See how to get a sitemap's pages list on the [structure endpoint](./structure.md
 ## Get a single page details
 
 * `GET /v1/sitemaps/<sitemap_id>/page/<page_id>`
-* Required scope: `sitemaps_read` or `sitemaps_write`
 
 ### Response
 ``` json
@@ -58,7 +57,6 @@ has_content | object/boolean | Object or `false` if page has no contents
 ## Get a single page diagrams list
 
 * `GET /v1/sitemaps/<sitemap_id>/page/<page_id>/diagrams`
-* Required scope: `sitemaps_diagrams_read` or `sitemaps_diagrams_write`
 
 See the [diagrams](./diagrams.md) endpoint for details on how to get diagrams structures.
 
@@ -71,7 +69,6 @@ Possible other [responses](./../../sections/responses.md): `403` and `404`.
 ## Get a single page files list
 
 * `GET /v1/sitemaps/<sitemap_id>/page/<page_id>/files`
-* Required scope: `sitemaps_files_read` or `sitemaps_files_write`
 
 ### Response
 ``` json
@@ -114,7 +111,6 @@ file_type | string | One of: `file`, `mockup`
 * `GET /v1/sitemaps/<sitemap_id>/page/<page_id>/content`  
 or  
 `GET /v1/sitemaps/<sitemap_id>/page/<page_id>/content/<language>`
-* Required scope: `sitemaps_content_read` or `sitemaps_content_write`
 
 ### Response
 ``` json

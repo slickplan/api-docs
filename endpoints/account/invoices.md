@@ -3,7 +3,6 @@
 ## Get all invoices
 
 * `GET /v1/account/invoices`
-* Required scope: `invoice_history_read`
 
 ### Response
 ``` json
@@ -38,7 +37,6 @@ description | string | Transaction description
 ## Get single invoice
 
 * `GET /v1/account/invoices/3`
-* Required scope: `invoice_history_read`
 
 ### Response
 ``` json
