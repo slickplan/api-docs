@@ -16,10 +16,11 @@ We offer OAuth2 as the standard way to authenticate with our API as this offers 
     
     Key | Type | Description
     --- | --- | ---
+    response_type | string | **Required.** Value MUST be set to `code`
     client_id | string | **Required.** The client ID you received from Slickplan when you registered
     redirect_uri | string | **Required.** The URL in your app where users will be sent after authorization
-    state | string | **Required.** This is an unguessable random string, equivalent of a `CSRF` token, and provides session validation for your authorize request. See the [OAuth2.0 Spec](https://tools.ietf.org/html/rfc6749#section-4.1.1) for more information
-    scope | string | A space separated list of [scopes](./scopes.md). If not provided, scope defaults to `all_read`
+    state | string | **Recommended.** This is an unguessable random string, equivalent of a `CSRF` token, and provides session validation for your authorize request. See the [OAuth2.0 Spec](https://tools.ietf.org/html/rfc6749#section-4.1.1) for more information
+    scope | string | Optional. A space separated list of [scopes](./scopes.md). If not provided, scope defaults to `all_read`
     
     If the user accepts your request, Slickplan redirects back to your site with a temporary code in a `code` parameter as well as the state you provided in the previous step in a `state` parameter. If the states don’t match, the request has been created by a third party and the process should be aborted.
 
